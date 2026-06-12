@@ -9,21 +9,21 @@ export default function Collection() {
   useSEO({
     title: "Collections | Label Muskaan Singh & Ibtida",
     description: "Shop all ethnic wear collections — Chikankari sarees, lehengas, sharara sets, kurta sets, co-ords, and more from Label Muskaan Singh and Ibtida.",
-    canonical: "https://muskaansingh.in/collection",
+    canonical: "https://www.muskaansingh.in/collection",
   });
   useSchema({
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    "@id": "https://muskaansingh.in/collection#webpage",
-    "url": "https://muskaansingh.in/collection",
+    "@id": "https://www.muskaansingh.in/collection#webpage",
+    "url": "https://www.muskaansingh.in/collection",
     "name": "Collections | Label Muskaan Singh & Ibtida",
     "description": "All ethnic wear collections — Chikankari sarees, lehengas, sharara sets, kurta sets, co-ords, and more.",
-    "isPartOf": { "@id": "https://muskaansingh.in/#website" },
+    "isPartOf": { "@id": "https://www.muskaansingh.in/#website" },
     "breadcrumb": {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://muskaansingh.in/" },
-        { "@type": "ListItem", "position": 2, "name": "Collections", "item": "https://muskaansingh.in/collection" }
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.muskaansingh.in/" },
+        { "@type": "ListItem", "position": 2, "name": "Collections", "item": "https://www.muskaansingh.in/collection" }
       ]
     },
     "mainEntity": {

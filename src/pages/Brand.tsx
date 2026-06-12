@@ -39,22 +39,22 @@ export default function Brand() {
   useSEO({
     title: "Label Muskaan Singh | Luxury Chikankari Ethnic Wear",
     description: "Label Muskaan Singh is a contemporary ethnic fashion label specialising in luxury Chikankari. Discover the brand, its philosophy, and sub-brand Ibtida.",
-    canonical: "https://muskaansingh.in/brand",
+    canonical: "https://www.muskaansingh.in/brand",
   });
   useSchema({
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://muskaansingh.in/brand#webpage",
-    "url": "https://muskaansingh.in/brand",
+    "@id": "https://www.muskaansingh.in/brand#webpage",
+    "url": "https://www.muskaansingh.in/brand",
     "name": "Label Muskaan Singh | Luxury Chikankari Ethnic Wear",
     "description": "Label Muskaan Singh is a contemporary ethnic fashion label specialising in luxury Chikankari wear. Founded 2023, Kolkata.",
-    "isPartOf": { "@id": "https://muskaansingh.in/#website" },
-    "about": { "@id": "https://muskaansingh.in/#organization" },
+    "isPartOf": { "@id": "https://www.muskaansingh.in/#website" },
+    "about": { "@id": "https://www.muskaansingh.in/#organization" },
     "breadcrumb": {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://muskaansingh.in/" },
-        { "@type": "ListItem", "position": 2, "name": "Brand", "item": "https://muskaansingh.in/brand" }
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.muskaansingh.in/" },
+        { "@type": "ListItem", "position": 2, "name": "Brand", "item": "https://www.muskaansingh.in/brand" }
       ]
     },
     "speakable": {

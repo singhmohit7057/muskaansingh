@@ -39,21 +39,21 @@ export default function ContactPage() {
   useSEO({
     title: "Contact | Muskaan Singh",
     description: "Get in touch with Muskaan Singh for general inquiries, brand collaborations, or press inquiries.",
-    canonical: "https://muskaansingh.in/contact",
+    canonical: "https://www.muskaansingh.in/contact",
   });
   useSchema({
     "@context": "https://schema.org",
     "@type": "ContactPage",
-    "@id": "https://muskaansingh.in/contact#webpage",
-    "url": "https://muskaansingh.in/contact",
+    "@id": "https://www.muskaansingh.in/contact#webpage",
+    "url": "https://www.muskaansingh.in/contact",
     "name": "Contact | Muskaan Singh",
     "description": "Contact Muskaan Singh for general inquiries, brand collaborations, or press inquiries.",
-    "isPartOf": { "@id": "https://muskaansingh.in/#website" },
+    "isPartOf": { "@id": "https://www.muskaansingh.in/#website" },
     "breadcrumb": {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://muskaansingh.in/" },
-        { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://muskaansingh.in/contact" }
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.muskaansingh.in/" },
+        { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://www.muskaansingh.in/contact" }
       ]
     },
     "mainEntity": {

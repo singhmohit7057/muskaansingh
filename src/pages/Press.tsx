@@ -10,21 +10,21 @@ export default function Press() {
   useSEO({
     title: "Press & Media | Label Muskaan Singh",
     description: "Label Muskaan Singh has been featured in Republic India, Daily Hunt, FlipBoard, Indian Bulletin, and more. Read the latest press coverage.",
-    canonical: "https://muskaansingh.in/press",
+    canonical: "https://www.muskaansingh.in/press",
   });
   useSchema({
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://muskaansingh.in/press#webpage",
-    "url": "https://muskaansingh.in/press",
+    "@id": "https://www.muskaansingh.in/press#webpage",
+    "url": "https://www.muskaansingh.in/press",
     "name": "Press & Media | Label Muskaan Singh",
     "description": "Press and media coverage of Label Muskaan Singh across Republic India, Daily Hunt, FlipBoard, Indian Bulletin, Indian Sentinel, Abhyuday Times, and RD Times.",
-    "isPartOf": { "@id": "https://muskaansingh.in/#website" },
+    "isPartOf": { "@id": "https://www.muskaansingh.in/#website" },
     "breadcrumb": {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://muskaansingh.in/" },
-        { "@type": "ListItem", "position": 2, "name": "Press", "item": "https://muskaansingh.in/press" }
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.muskaansingh.in/" },
+        { "@type": "ListItem", "position": 2, "name": "Press", "item": "https://www.muskaansingh.in/press" }
       ]
     },
     "mainEntity": {

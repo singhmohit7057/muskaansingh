@@ -30,7 +30,7 @@ export default function Terms() {
   useSEO({
     title: "Terms of Use | Muskaan Singh",
     description: "Terms of use for muskaansingh.in — rules and guidelines for using this website.",
-    canonical: "https://muskaansingh.in/terms",
+    canonical: "https://www.muskaansingh.in/terms",
   });
   return (
     <div className="bg-[#E0E5EC] text-[#3D4852] pt-[70px] min-h-screen">

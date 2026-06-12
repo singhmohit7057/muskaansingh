@@ -46,10 +46,10 @@ Label Muskaan Singh garments have been worn by: Bhagyashree, Mimi Chakraborty, A
 
 ## Pages
 
-- Home: https://muskaansingh.in/
-- About: https://muskaansingh.in/about
-- Brand: https://muskaansingh.in/brand
-- Collection: https://muskaansingh.in/collection
-- Content: https://muskaansingh.in/content
-- Press: https://muskaansingh.in/press
-- Contact: https://muskaansingh.in/contact
+- Home: https://www.muskaansingh.in/
+- About: https://www.muskaansingh.in/about
+- Brand: https://www.muskaansingh.in/brand
+- Collection: https://www.muskaansingh.in/collection
+- Content: https://www.muskaansingh.in/content
+- Press: https://www.muskaansingh.in/press
+- Contact: https://www.muskaansingh.in/contact

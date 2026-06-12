@@ -21,17 +21,17 @@ export default function Home() {
   useSEO({
     title: "Muskaan Singh | Founder of Label Muskaan Singh",
     description: "Muskaan Singh is the founder of Label Muskaan Singh — contemporary ethnic wear rooted in Chikankari craftsmanship and modern identity.",
-    canonical: "https://muskaansingh.in/",
+    canonical: "https://www.muskaansingh.in/",
   });
   useSchema({
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://muskaansingh.in/#webpage",
-    "url": "https://muskaansingh.in/",
+    "@id": "https://www.muskaansingh.in/#webpage",
+    "url": "https://www.muskaansingh.in/",
     "name": "Muskaan Singh | Founder of Label Muskaan Singh",
     "description": "Official portfolio of Muskaan Singh — fashion designer, content creator, and founder of Label Muskaan Singh.",
-    "isPartOf": { "@id": "https://muskaansingh.in/#website" },
-    "about": { "@id": "https://muskaansingh.in/#person" },
+    "isPartOf": { "@id": "https://www.muskaansingh.in/#website" },
+    "about": { "@id": "https://www.muskaansingh.in/#person" },
     "speakable": {
       "@type": "SpeakableSpecification",
       "cssSelector": ["h1", ".section-tag"]

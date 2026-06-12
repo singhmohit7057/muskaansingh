@@ -22,7 +22,7 @@ export default function Cookies() {
   useSEO({
     title: "Cookies Policy | Muskaan Singh",
     description: "Cookies policy for muskaansingh.in — how we use cookies and browser storage.",
-    canonical: "https://muskaansingh.in/cookies",
+    canonical: "https://www.muskaansingh.in/cookies",
   });
   return (
     <div className="bg-[#E0E5EC] text-[#3D4852] pt-[70px] min-h-screen">

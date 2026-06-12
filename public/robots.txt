@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://muskaansingh.in/sitemap.xml
+Sitemap: https://www.muskaansingh.in/sitemap.xml

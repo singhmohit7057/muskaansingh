@@ -30,7 +30,7 @@ export default function Privacy() {
   useSEO({
     title: "Privacy Policy | Muskaan Singh",
     description: "Privacy policy for muskaansingh.in — how we collect, use, and protect your information.",
-    canonical: "https://muskaansingh.in/privacy",
+    canonical: "https://www.muskaansingh.in/privacy",
   });
   return (
     <div className="bg-[#E0E5EC] text-[#3D4852] pt-[70px] min-h-screen">

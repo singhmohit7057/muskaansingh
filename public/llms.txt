@@ -6,10 +6,10 @@ Muskaan Singh is a Kolkata-based fashion designer and content creator. She is th
 
 ## Pages
 
-- [Home](https://muskaansingh.in/): Portfolio homepage with hero, celebrity features, and Instagram grid
-- [About](https://muskaansingh.in/about): Background, story, and milestones
-- [Brand](https://muskaansingh.in/brand): Label Muskaan Singh and Ibtida brand pages
-- [Collection](https://muskaansingh.in/collection): All ethnic wear collections
-- [Content](https://muskaansingh.in/content): Brand collaborations and content creation work
-- [Press](https://muskaansingh.in/press): Media coverage and press features
-- [Contact](https://muskaansingh.in/contact): Contact and collaboration enquiry forms
+- [Home](https://www.muskaansingh.in/): Portfolio homepage with hero, celebrity features, and Instagram grid
+- [About](https://www.muskaansingh.in/about): Background, story, and milestones
+- [Brand](https://www.muskaansingh.in/brand): Label Muskaan Singh and Ibtida brand pages
+- [Collection](https://www.muskaansingh.in/collection): All ethnic wear collections
+- [Content](https://www.muskaansingh.in/content): Brand collaborations and content creation work
+- [Press](https://www.muskaansingh.in/press): Media coverage and press features
+- [Contact](https://www.muskaansingh.in/contact): Contact and collaboration enquiry forms
