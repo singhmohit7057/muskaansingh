@@ -1,12 +1,43 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 import { press } from "../data/press";
-import SectionTitle from "../components/SectionTitle";
 import CtaBanner from "../components/CtaBanner";
+import useSEO from "../hooks/useSEO";
+import useSchema from "../hooks/useSchema";
 
 const ease = [0.16, 1, 0.3, 1] as const;
 
 export default function Press() {
+  useSEO({
+    title: "Press & Media | Label Muskaan Singh",
+    description: "Label Muskaan Singh has been featured in Republic India, Daily Hunt, FlipBoard, Indian Bulletin, and more. Read the latest press coverage.",
+    canonical: "https://muskaansingh.in/press",
+  });
+  useSchema({
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://muskaansingh.in/press#webpage",
+    "url": "https://muskaansingh.in/press",
+    "name": "Press & Media | Label Muskaan Singh",
+    "description": "Press and media coverage of Label Muskaan Singh across Republic India, Daily Hunt, FlipBoard, Indian Bulletin, Indian Sentinel, Abhyuday Times, and RD Times.",
+    "isPartOf": { "@id": "https://muskaansingh.in/#website" },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://muskaansingh.in/" },
+        { "@type": "ListItem", "position": 2, "name": "Press", "item": "https://muskaansingh.in/press" }
+      ]
+    },
+    "mainEntity": {
+      "@type": "ItemList",
+      "name": "Press Coverage",
+      "itemListElement": press.map((item, i) => ({
+        "@type": "ListItem",
+        "position": i + 1,
+        "name": item.title,
+        "url": item.link
+      }))
+    }
+  }, "schema-press");
   return (
     <div className="bg-[#E0E5EC] text-[#3D4852] pt-[70px]">
 

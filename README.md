@@ -1,73 +1,64 @@
-# React + TypeScript + Vite
+# Muskaan Singh — Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio and brand site for **Muskaan Singh**, founder of [Label Muskaan Singh](https://labelmuskaansingh.in) and Ibtida — contemporary ethnic fashion brands rooted in Indian craftsmanship.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Framework**: React 19 + TypeScript
+- **Build Tool**: Vite 8
+- **Styling**: Tailwind CSS v3 — Neumorphic / Soft UI design system
+- **Animations**: Framer Motion
+- **Routing**: React Router v6
+- **Forms**: Web3Forms API
+- **Deployment**: Vercel
 
-## React Compiler
+## Pages
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| Route | Description |
+|---|---|
+| `/` | Home — hero, as seen on, Instagram grid |
+| `/about` | About Muskaan Singh |
+| `/brand` | Label Muskaan Singh & Ibtida |
+| `/collection` | All collections |
+| `/content` | Brand collaborations |
+| `/press` | Press & media coverage |
+| `/contact` | Contact & collaboration forms |
+| `/privacy` | Privacy policy |
+| `/terms` | Terms of use |
+| `/cookies` | Cookies policy |
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Environment Variables
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Create a `.env` file in the root (see `.env.example`):
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
+VITE_WEB3FORMS_CONTACT_KEY=your_key_here
+VITE_WEB3FORMS_COLLAB_KEY=your_key_here
+```
+
+Get your free access key at [web3forms.com](https://web3forms.com).
+
+## Build & Deploy
+
+```bash
+npm run build
+```
+
+Deploy to Vercel — import the GitHub repo, add env vars in the Vercel dashboard, and deploy. SPA routing is handled by `vercel.json`.
+
+## Design System
+
+Neumorphic Soft UI built on:
+- Background: `#E0E5EC`
+- Accent: `#6C63FF` (violet)
+- Secondary: `#38B2AC` (teal)
+- Extruded shadow: `9px 9px 16px rgb(163,177,198,0.6), -9px -9px 16px rgba(255,255,255,0.5)`
+- Inset shadow: `inset 6px 6px 10px rgb(163,177,198,0.6), inset -6px -6px 10px rgba(255,255,255,0.5)`
+- Fonts: Plus Jakarta Sans (display) + DM Sans (body)

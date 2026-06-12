@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import useSEO from "../hooks/useSEO";
 
 const ease = [0.16, 1, 0.3, 1] as const;
 
@@ -26,6 +27,11 @@ const sections = [
 ];
 
 export default function Terms() {
+  useSEO({
+    title: "Terms of Use | Muskaan Singh",
+    description: "Terms of use for muskaansingh.in — rules and guidelines for using this website.",
+    canonical: "https://muskaansingh.in/terms",
+  });
   return (
     <div className="bg-[#E0E5EC] text-[#3D4852] pt-[70px] min-h-screen">
       <section className="py-14 px-6 md:px-12">

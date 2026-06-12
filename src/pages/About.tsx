@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 import SectionTitle from "../components/SectionTitle";
 import CtaBanner from "../components/CtaBanner";
+import useSEO from "../hooks/useSEO";
+import useSchema from "../hooks/useSchema";
 
 const ease = [0.16, 1, 0.3, 1] as const;
 
@@ -19,6 +20,32 @@ const pillars = [
 ];
 
 export default function About() {
+  useSEO({
+    title: "About Muskaan Singh | Fashion Designer & Content Creator",
+    description: "Learn about Muskaan Singh — her journey from fashion design graduate to founder of Label Muskaan Singh and Ibtida, and content creator with 80K+ followers.",
+    canonical: "https://muskaansingh.in/about",
+  });
+  useSchema({
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://muskaansingh.in/about#webpage",
+    "url": "https://muskaansingh.in/about",
+    "name": "About Muskaan Singh | Fashion Designer & Content Creator",
+    "description": "Muskaan Singh's journey from fashion design graduate to founder of Label Muskaan Singh and content creator with 80K+ followers.",
+    "isPartOf": { "@id": "https://muskaansingh.in/#website" },
+    "about": { "@id": "https://muskaansingh.in/#person" },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://muskaansingh.in/" },
+        { "@type": "ListItem", "position": 2, "name": "About", "item": "https://muskaansingh.in/about" }
+      ]
+    },
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": ["h1", "h2"]
+    }
+  }, "schema-about");
   return (
     <div className="bg-[#E0E5EC] text-[#3D4852] pt-[70px]">
 

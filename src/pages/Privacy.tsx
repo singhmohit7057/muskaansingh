@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import useSEO from "../hooks/useSEO";
 
 const ease = [0.16, 1, 0.3, 1] as const;
 
@@ -26,6 +27,11 @@ const sections = [
 ];
 
 export default function Privacy() {
+  useSEO({
+    title: "Privacy Policy | Muskaan Singh",
+    description: "Privacy policy for muskaansingh.in — how we collect, use, and protect your information.",
+    canonical: "https://muskaansingh.in/privacy",
+  });
   return (
     <div className="bg-[#E0E5EC] text-[#3D4852] pt-[70px] min-h-screen">
       <section className="py-14 px-6 md:px-12">

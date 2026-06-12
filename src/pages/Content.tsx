@@ -2,6 +2,8 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { collabs, categories } from "../data/collabs";
 import CtaBanner from "../components/CtaBanner";
+import useSEO from "../hooks/useSEO";
+import useSchema from "../hooks/useSchema";
 
 const ease = [0.16, 1, 0.3, 1] as const;
 
@@ -19,6 +21,32 @@ const typeColors: Record<string, string> = {
 };
 
 export default function Content() {
+  useSEO({
+    title: "Brand Collaborations | Muskaan Singh Content Creator",
+    description: "Muskaan Singh has collaborated with 20+ fashion, beauty, and lifestyle brands as a content creator on Instagram. Open to new partnerships.",
+    canonical: "https://muskaansingh.in/content",
+  });
+  useSchema({
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://muskaansingh.in/content#webpage",
+    "url": "https://muskaansingh.in/content",
+    "name": "Brand Collaborations | Muskaan Singh Content Creator",
+    "description": "Muskaan Singh collaborates with fashion, beauty, and lifestyle brands as an Instagram content creator with 80K+ followers.",
+    "isPartOf": { "@id": "https://muskaansingh.in/#website" },
+    "about": { "@id": "https://muskaansingh.in/#person" },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://muskaansingh.in/" },
+        { "@type": "ListItem", "position": 2, "name": "Content", "item": "https://muskaansingh.in/content" }
+      ]
+    },
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": ["h1"]
+    }
+  }, "schema-content");
   const [activeCategory, setActiveCategory] = useState("All");
 
   const filtered = activeCategory === "All"

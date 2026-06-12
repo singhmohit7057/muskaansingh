@@ -12,6 +12,7 @@ import Terms from './pages/Terms'
 import Cookies from './pages/Cookies'
 import Navbar from './layout/Navbar'
 import Footer from './layout/Footer'
+import NotFound from './pages/NotFound'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -19,10 +20,23 @@ function ScrollToTop() {
   return null
 }
 
+function RedirectHandler() {
+  const { pathname } = useLocation()
+  useEffect(() => {
+    const redirect = sessionStorage.getItem('redirect')
+    if (redirect && redirect !== pathname) {
+      sessionStorage.removeItem('redirect')
+      window.history.replaceState(null, '', redirect)
+    }
+  }, [])
+  return null
+}
+
 export default function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
+      <RedirectHandler />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -35,6 +49,7 @@ export default function App() {
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/terms" element={<Terms />} />
         <Route path="/cookies" element={<Cookies />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </BrowserRouter>

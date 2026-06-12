@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import useSEO from "../hooks/useSEO";
+import useSchema from "../hooks/useSchema";
 import { AtSign, Mail, MapPin } from "lucide-react";
 import ContactForm from "../components/form/contact";
 import CollaborationForm from "../components/form/collaboration";
@@ -11,7 +13,7 @@ const contactInfo = [
     label: "Email",
     items: [
       { text: "labelms.team@gmail.com",        href: "mailto:labelms.team@gmail.com" },
-      { text: "workwithmuskaansingh@gmail.com", href: "mailto:workwithmuskaansingh@gmail.com" },
+      { text: "work.muskaansingh@gmail.com", href: "mailto:work.muskaansingh@gmail.com" },
     ],
   },
   {
@@ -34,6 +36,48 @@ const contactInfo = [
 ];
 
 export default function ContactPage() {
+  useSEO({
+    title: "Contact | Muskaan Singh",
+    description: "Get in touch with Muskaan Singh for general inquiries, brand collaborations, or press inquiries.",
+    canonical: "https://muskaansingh.in/contact",
+  });
+  useSchema({
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "@id": "https://muskaansingh.in/contact#webpage",
+    "url": "https://muskaansingh.in/contact",
+    "name": "Contact | Muskaan Singh",
+    "description": "Contact Muskaan Singh for general inquiries, brand collaborations, or press inquiries.",
+    "isPartOf": { "@id": "https://muskaansingh.in/#website" },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://muskaansingh.in/" },
+        { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://muskaansingh.in/contact" }
+      ]
+    },
+    "mainEntity": {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How can I contact Muskaan Singh?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can reach Muskaan Singh via email at labelms.team@gmail.com or work.muskaansingh@gmail.com, or through Instagram @muskaansingh97."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I collaborate with Muskaan Singh?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Brands can submit a collaboration request through the enquiry form on this page or email work.muskaansingh@gmail.com. Muskaan is open to campaigns, gifting, and paid partnerships across fashion, beauty, and lifestyle."
+          }
+        }
+      ]
+    }
+  }, "schema-contact");
   return (
     <div className="bg-[#E0E5EC] text-[#3D4852] pt-[70px]">
 

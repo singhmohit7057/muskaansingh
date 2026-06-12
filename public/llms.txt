@@ -1,0 +1,15 @@
+# Muskaan Singh
+
+> Fashion designer, content creator, and founder of Label Muskaan Singh and Ibtida.
+
+Muskaan Singh is a Kolkata-based fashion designer and content creator. She is the founder of Label Muskaan Singh, a luxury ethnic wear brand specialising in Chikankari, and Ibtida, an accessible everyday ethnic wear sub-brand launched in 2025.
+
+## Pages
+
+- [Home](https://muskaansingh.in/): Portfolio homepage with hero, celebrity features, and Instagram grid
+- [About](https://muskaansingh.in/about): Background, story, and milestones
+- [Brand](https://muskaansingh.in/brand): Label Muskaan Singh and Ibtida brand pages
+- [Collection](https://muskaansingh.in/collection): All ethnic wear collections
+- [Content](https://muskaansingh.in/content): Brand collaborations and content creation work
+- [Press](https://muskaansingh.in/press): Media coverage and press features
+- [Contact](https://muskaansingh.in/contact): Contact and collaboration enquiry forms

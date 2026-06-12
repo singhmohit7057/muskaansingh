@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import useSEO from "../hooks/useSEO";
 
 const ease = [0.16, 1, 0.3, 1] as const;
 
@@ -18,6 +19,11 @@ const sections = [
 ];
 
 export default function Cookies() {
+  useSEO({
+    title: "Cookies Policy | Muskaan Singh",
+    description: "Cookies policy for muskaansingh.in — how we use cookies and browser storage.",
+    canonical: "https://muskaansingh.in/cookies",
+  });
   return (
     <div className="bg-[#E0E5EC] text-[#3D4852] pt-[70px] min-h-screen">
       <section className="py-14 px-6 md:px-12">

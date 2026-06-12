@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { ShoppingBag, ShoppingCart, Heart, Zap, Globe, Tag } from "lucide-react";
 import SectionTitle from "../components/SectionTitle";
 import CtaBanner from "../components/CtaBanner";
+import useSEO from "../hooks/useSEO";
+import useSchema from "../hooks/useSchema";
 
 const ease = [0.16, 1, 0.3, 1] as const;
 
@@ -34,6 +36,61 @@ const platforms = [
 ];
 
 export default function Brand() {
+  useSEO({
+    title: "Label Muskaan Singh | Luxury Chikankari Ethnic Wear",
+    description: "Label Muskaan Singh is a contemporary ethnic fashion label specialising in luxury Chikankari. Discover the brand, its philosophy, and sub-brand Ibtida.",
+    canonical: "https://muskaansingh.in/brand",
+  });
+  useSchema({
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://muskaansingh.in/brand#webpage",
+    "url": "https://muskaansingh.in/brand",
+    "name": "Label Muskaan Singh | Luxury Chikankari Ethnic Wear",
+    "description": "Label Muskaan Singh is a contemporary ethnic fashion label specialising in luxury Chikankari wear. Founded 2023, Kolkata.",
+    "isPartOf": { "@id": "https://muskaansingh.in/#website" },
+    "about": { "@id": "https://muskaansingh.in/#organization" },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://muskaansingh.in/" },
+        { "@type": "ListItem", "position": 2, "name": "Brand", "item": "https://muskaansingh.in/brand" }
+      ]
+    },
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": ["h1", "h2", "blockquote"]
+    },
+    "mainEntity": {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Label Muskaan Singh?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Label Muskaan Singh is a contemporary ethnic fashion label founded by Muskaan Singh in 2023, specialising in luxury Chikankari — the intricate needlework tradition of Lucknow — applied to modern silhouettes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Ibtida?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ibtida, meaning 'a new beginning', is the everyday sub-brand of Label Muskaan Singh launched in 2025. It is designed for daily life — accessible, wearable ethnic wear without compromising on craft."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where can I buy Label Muskaan Singh?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Label Muskaan Singh is available on labelmuskaansingh.in, Amazon India, Flipkart, Myntra, AJIO, and Meesho."
+          }
+        }
+      ]
+    }
+  }, "schema-brand");
   return (
     <div className="bg-[#E0E5EC] text-[#3D4852] pt-[70px]">
 

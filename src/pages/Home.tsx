@@ -5,6 +5,8 @@ import Hero from "../components/Hero";
 import SectionTitle from "../components/SectionTitle";
 import CtaBanner from "../components/CtaBanner";
 import { instagramPosts, celebrities } from "../data/instagram";
+import useSEO from "../hooks/useSEO";
+import useSchema from "../hooks/useSchema";
 
 const ease = [0.16, 1, 0.3, 1] as const;
 
@@ -16,6 +18,25 @@ const instagramAccounts = [
 
 
 export default function Home() {
+  useSEO({
+    title: "Muskaan Singh | Founder of Label Muskaan Singh",
+    description: "Muskaan Singh is the founder of Label Muskaan Singh — contemporary ethnic wear rooted in Chikankari craftsmanship and modern identity.",
+    canonical: "https://muskaansingh.in/",
+  });
+  useSchema({
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://muskaansingh.in/#webpage",
+    "url": "https://muskaansingh.in/",
+    "name": "Muskaan Singh | Founder of Label Muskaan Singh",
+    "description": "Official portfolio of Muskaan Singh — fashion designer, content creator, and founder of Label Muskaan Singh.",
+    "isPartOf": { "@id": "https://muskaansingh.in/#website" },
+    "about": { "@id": "https://muskaansingh.in/#person" },
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": ["h1", ".section-tag"]
+    }
+  }, "schema-home");
   return (
     <div className="bg-[#E0E5EC] text-[#3D4852]">
       <Hero />

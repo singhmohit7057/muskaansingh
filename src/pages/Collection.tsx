@@ -1,12 +1,44 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 import { categories } from "../data/categories";
-import SectionTitle from "../components/SectionTitle";
-import CtaBanner from "../components/CtaBanner";
+import useSEO from "../hooks/useSEO";
+import useSchema from "../hooks/useSchema";
 
 const ease = [0.16, 1, 0.3, 1] as const;
 
 export default function Collection() {
+  useSEO({
+    title: "Collections | Label Muskaan Singh & Ibtida",
+    description: "Shop all ethnic wear collections — Chikankari sarees, lehengas, sharara sets, kurta sets, co-ords, and more from Label Muskaan Singh and Ibtida.",
+    canonical: "https://muskaansingh.in/collection",
+  });
+  useSchema({
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": "https://muskaansingh.in/collection#webpage",
+    "url": "https://muskaansingh.in/collection",
+    "name": "Collections | Label Muskaan Singh & Ibtida",
+    "description": "All ethnic wear collections — Chikankari sarees, lehengas, sharara sets, kurta sets, co-ords, and more.",
+    "isPartOf": { "@id": "https://muskaansingh.in/#website" },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://muskaansingh.in/" },
+        { "@type": "ListItem", "position": 2, "name": "Collections", "item": "https://muskaansingh.in/collection" }
+      ]
+    },
+    "mainEntity": {
+      "@type": "ItemList",
+      "name": "Label Muskaan Singh Collections",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Sarees", "url": "https://labelmuskaansingh.in/collections/sarees" },
+        { "@type": "ListItem", "position": 2, "name": "Lehengas", "url": "https://labelmuskaansingh.in/collections/lehenga" },
+        { "@type": "ListItem", "position": 3, "name": "Sharara Sets", "url": "https://labelmuskaansingh.in/collections/sharara-set" },
+        { "@type": "ListItem", "position": 4, "name": "Kurta Sets", "url": "https://labelmuskaansingh.in/collections/kurta-set" },
+        { "@type": "ListItem", "position": 5, "name": "Co-ords", "url": "https://labelmuskaansingh.in/collections/co-ords" },
+        { "@type": "ListItem", "position": 6, "name": "Kurtis", "url": "https://labelmuskaansingh.in/collections/kurtis" }
+      ]
+    }
+  }, "schema-collection");
   return (
     <div className="bg-[#E0E5EC] text-[#3D4852] pt-[70px]">
 
