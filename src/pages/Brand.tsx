@@ -124,7 +124,7 @@ export default function Brand() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.65, ease }}
           >
-            {[["2023","Est."],["KOL","Origin"],["5+","Platforms"]].map(([v,l]) => (
+            {[["2023","Est."],["KOL","Origin"],[`${platforms.length}+`,"Platforms"]].map(([v,l]) => (
               <div key={l} className="px-7 py-4 rounded-2xl" style={{ boxShadow: "9px 9px 16px rgb(163,177,198,0.6), -9px -9px 16px rgba(255,255,255,0.5)" }}>
                 <p className="font-display font-extrabold text-2xl text-[#3D4852]">{v}</p>
                 <p className="text-[#6B7280] text-xs font-medium mt-1 uppercase tracking-wider">{l}</p>

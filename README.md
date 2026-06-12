@@ -2,6 +2,8 @@
 
 Personal portfolio and brand site for **Muskaan Singh**, founder of [Label Muskaan Singh](https://labelmuskaansingh.in) and Ibtida — contemporary ethnic fashion brands rooted in Indian craftsmanship.
 
+Live: [muskaansingh.in](https://muskaansingh.in) · [muskaansingh.vercel.app](https://muskaansingh.vercel.app)
+
 ## Tech Stack
 
 - **Framework**: React 19 + TypeScript
@@ -52,6 +54,15 @@ npm run build
 ```
 
 Deploy to Vercel — import the GitHub repo, add env vars in the Vercel dashboard, and deploy. SPA routing is handled by `vercel.json`.
+
+## SEO & AEO
+
+- Per-page `<title>`, `<meta description>`, and canonical via `useSEO` hook
+- Per-page structured data (WebPage, BreadcrumbList, FAQPage, ItemList, ContactPage) via `useSchema` hook
+- Global schemas: `Person`, `Organization`, `WebSite` + `SearchAction`
+- `sitemap.xml`, `robots.txt`, `llms.txt`, `llms-full.txt`
+- PWA `manifest.json`
+- OG + Twitter card meta tags
 
 ## Design System
 
