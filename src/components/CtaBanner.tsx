@@ -29,7 +29,7 @@ export default function CtaBanner({
           >
             {heading}
           </h2>
-          <p className="text-[#6B7280] mt-2 text-sm font-medium max-w-md">{body}</p>
+          <p className="text-[#4B5563] mt-2 text-sm font-medium max-w-md">{body}</p>
         </div>
         <Link to={buttonTo} className="btn-primary shrink-0">
           {buttonLabel}

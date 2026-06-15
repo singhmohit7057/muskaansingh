@@ -15,9 +15,9 @@ const stats = [
 ];
 
 const typeColors: Record<string, string> = {
-  Reel:  "#6C63FF",
-  Post:  "#38B2AC",
-  Story: "#8B84FF",
+  Reel:  "#4C40C0",
+  Post:  "#006060",
+  Story: "#4C40C0",
 };
 
 export default function Content() {
@@ -71,7 +71,7 @@ export default function Content() {
             Brand<br />Collaborations
           </motion.h1>
           <motion.p
-            className="text-[#6B7280] text-lg font-medium mt-5 max-w-lg mx-auto"
+            className="text-[#4B5563] text-lg font-medium mt-5 max-w-lg mx-auto"
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.45, ease }}
@@ -96,8 +96,8 @@ export default function Content() {
                 className="rounded-[24px] p-6 text-center"
                 style={{ boxShadow: "9px 9px 16px rgb(163,177,198,0.6), -9px -9px 16px rgba(255,255,255,0.5)" }}
               >
-                <p className="font-display font-extrabold text-3xl text-[#6C63FF]">{s.value}</p>
-                <p className="text-[#6B7280] text-xs font-semibold uppercase tracking-wider mt-1">{s.label}</p>
+                <p className="font-display font-extrabold text-3xl text-[#4C40C0]">{s.value}</p>
+                <p className="text-[#4B5563] text-xs font-semibold uppercase tracking-wider mt-1">{s.label}</p>
               </div>
             ))}
           </motion.div>
@@ -116,7 +116,7 @@ export default function Content() {
                 boxShadow: activeCategory === cat
                   ? "inset 6px 6px 10px rgb(163,177,198,0.6), inset -6px -6px 10px rgba(255,255,255,0.5)"
                   : "5px 5px 10px rgb(163,177,198,0.6), -5px -5px 10px rgba(255,255,255,0.5)",
-                color: activeCategory === cat ? "#6C63FF" : "#6B7280",
+                color: activeCategory === cat ? "#4C40C0" : "#4B5563",
               }}
             >
               {cat}
@@ -143,8 +143,8 @@ export default function Content() {
                 {/* Top row */}
                 <div className="flex items-start justify-between gap-4">
                   <div>
-                    <span className="text-xs font-bold text-[#6C63FF] uppercase tracking-widest">{collab.category}</span>
-                    <h3 className="font-display font-extrabold text-[#3D4852] text-xl mt-1 group-hover:text-[#6C63FF] transition-colors duration-300">
+                    <span className="text-xs font-bold text-[#4C40C0] uppercase tracking-widest">{collab.category}</span>
+                    <h3 className="font-display font-extrabold text-[#3D4852] text-xl mt-1 group-hover:text-[#4C40C0] transition-colors duration-300">
                       {collab.brand}
                     </h3>
                   </div>
@@ -152,12 +152,12 @@ export default function Content() {
                     className="w-10 h-10 rounded-2xl flex items-center justify-center shrink-0"
                     style={{ boxShadow: "inset 6px 6px 10px rgb(163,177,198,0.6), inset -6px -6px 10px rgba(255,255,255,0.5)" }}
                   >
-                    <span className="font-display font-bold text-sm text-[#6C63FF]">{String(collab.id).padStart(2, "0")}</span>
+                    <span className="font-display font-bold text-sm text-[#4C40C0]">{String(collab.id).padStart(2, "0")}</span>
                   </div>
                 </div>
 
                 {/* Description */}
-                <p className="text-[#6B7280] text-sm leading-relaxed flex-1">{collab.description}</p>
+                <p className="text-[#4B5563] text-sm leading-relaxed flex-1">{collab.description}</p>
 
                 {/* Bottom row — type tags + links */}
                 <div className="flex items-center justify-between gap-3 flex-wrap">
@@ -167,7 +167,7 @@ export default function Content() {
                         key={t}
                         className="text-xs font-bold px-3 py-1 rounded-xl"
                         style={{
-                          color: typeColors[t] ?? "#6C63FF",
+                          color: typeColors[t] ?? "#4C40C0",
                           boxShadow: "inset 4px 4px 8px rgb(163,177,198,0.5), inset -4px -4px 8px rgba(255,255,255,0.5)",
                         }}
                       >
@@ -182,7 +182,7 @@ export default function Content() {
                         href={url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-xs font-bold text-[#6C63FF] px-3 py-1 rounded-xl transition-all duration-200 hover:text-[#8B84FF]"
+                        className="text-xs font-bold text-[#4C40C0] px-3 py-1 rounded-xl transition-all duration-200 hover:text-[#6C63FF]"
                         style={{ boxShadow: "inset 4px 4px 8px rgb(163,177,198,0.5), inset -4px -4px 8px rgba(255,255,255,0.5)" }}
                       >
                         {collab.links.length > 1 ? `View ${idx + 1} →` : "View →"}

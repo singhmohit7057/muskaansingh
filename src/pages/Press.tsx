@@ -56,7 +56,7 @@ export default function Press() {
             Press &amp; Media
           </motion.h1>
           <motion.p
-            className="text-[#6B7280] text-lg font-medium mt-5 mx-auto"
+            className="text-[#4B5563] text-lg font-medium mt-5 mx-auto"
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.45, ease }}
@@ -88,16 +88,16 @@ export default function Press() {
                 className="w-14 h-14 rounded-2xl flex items-center justify-center shrink-0"
                 style={{ boxShadow: "inset 6px 6px 10px rgb(163,177,198,0.6), inset -6px -6px 10px rgba(255,255,255,0.5)" }}
               >
-                <span className="font-display font-extrabold text-[#6C63FF] text-lg">{String(i + 1).padStart(2, "0")}</span>
+                <span className="font-display font-extrabold text-[#4C40C0] text-lg">{String(i + 1).padStart(2, "0")}</span>
               </div>
 
               {/* Text */}
               <div className="flex-1 min-w-0">
-                <p className="text-xs font-semibold text-[#6C63FF] uppercase tracking-wider mb-2">
+                <p className="text-xs font-semibold text-[#4C40C0] uppercase tracking-wider mb-2">
                   {item.publication} · {item.date}
                 </p>
                 <h2
-                  className="font-display font-bold text-[#3D4852] leading-snug group-hover:text-[#6C63FF] transition-colors duration-300"
+                  className="font-display font-bold text-[#3D4852] leading-snug group-hover:text-[#4C40C0] transition-colors duration-300"
                   style={{ fontSize: "clamp(1rem, 2.5vw, 1.4rem)" }}
                 >
                   {item.title}
@@ -105,7 +105,7 @@ export default function Press() {
               </div>
 
               {/* Arrow */}
-              <span className="hidden md:block text-[#6C63FF] text-2xl opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300">
+              <span className="hidden md:block text-[#4C40C0] text-2xl opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300">
                 →
               </span>
             </motion.a>

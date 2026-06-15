@@ -42,7 +42,7 @@ export default function Navbar() {
 
           {/* LOGO */}
           <Link to="/" className="group flex flex-col leading-none">
-            <span className="font-display font-bold text-lg text-[#3D4852] tracking-tight transition-colors duration-300 group-hover:text-[#6C63FF]">
+            <span className="font-display font-bold text-lg text-[#3D4852] tracking-tight transition-colors duration-300 group-hover:text-[#4C40C0]">
               Muskaan Singh
             </span>
           </Link>
@@ -55,12 +55,12 @@ export default function Navbar() {
                 <Link
                   key={link.name}
                   to={link.path}
-                  className="relative text-sm font-medium transition-colors duration-200"
-                  style={{ color: active ? "#6C63FF" : "#6B7280" }}
+                  className="relative text-sm font-medium transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4C40C0] focus-visible:ring-offset-2 focus-visible:ring-offset-[#E0E5EC] rounded"
+                  style={{ color: active ? "#4C40C0" : "#4B5563" }}
                 >
                   {link.name}
                   {active && (
-                    <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-[#6C63FF] rounded-full" />
+                    <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-[#4C40C0] rounded-full" />
                   )}
                 </Link>
               );
@@ -123,7 +123,7 @@ export default function Navbar() {
                     <Link
                       to={link.path}
                       className="font-display font-bold text-[#3D4852] transition-colors duration-300"
-                      style={{ fontSize: "clamp(2rem, 8vw, 3rem)", color: active ? "#6C63FF" : "#3D4852" }}
+                      style={{ fontSize: "clamp(2rem, 8vw, 3rem)", color: active ? "#4C40C0" : "#3D4852" }}
                     >
                       {link.name}
                     </Link>
@@ -138,7 +138,7 @@ export default function Navbar() {
                   href={`https://instagram.com/${h}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-[#6B7280] hover:text-[#6C63FF] transition-colors"
+                  className="text-sm text-[#4B5563] hover:text-[#4C40C0] transition-colors block py-2"
                 >
                   @{h}
                 </a>

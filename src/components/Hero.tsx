@@ -33,9 +33,12 @@ function NeuCircles() {
         }}
       >
         <img
-          src="/muskaan/Muskaan_Singh.jpeg"
-          alt="Label Muskaan Singh"
+          src="/muskaan/Muskaan_Singh.webp"
+          alt="Muskaan Singh, founder of Label Muskaan Singh"
           className="w-full h-full object-cover"
+          width="256"
+          height="256"
+          fetchPriority="high"
         />
       </div>
     </div>
@@ -80,7 +83,7 @@ export default function Hero() {
             </motion.div>
 
             <motion.p
-              className="text-[#6B7280] text-lg font-medium mt-6 mb-10 leading-relaxed max-w-md text-center md:text-left mx-auto md:mx-0"
+              className="text-[#4B5563] text-lg font-medium mt-6 mb-10 leading-relaxed max-w-md text-center md:text-left mx-auto md:mx-0"
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4, ease }}
@@ -102,7 +105,7 @@ export default function Hero() {
                   style={{ boxShadow: "9px 9px 16px rgb(163,177,198,0.6), -9px -9px 16px rgba(255,255,255,0.5)" }}
                 >
                   <p className="font-display font-extrabold text-2xl text-[#3D4852] leading-none">{s.value}</p>
-                  <p className="text-[#6B7280] text-xs font-medium mt-1 uppercase tracking-wider">{s.label}</p>
+                  <p className="text-[#4B5563] text-xs font-medium mt-1 uppercase tracking-wider">{s.label}</p>
                 </div>
               ))}
             </motion.div>

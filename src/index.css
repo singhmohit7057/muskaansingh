@@ -1,3 +1,6 @@
+@import "@fontsource-variable/plus-jakarta-sans";
+@import "@fontsource-variable/dm-sans";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,7 +10,7 @@
   html { scroll-behavior: smooth; }
 
   body {
-    font-family: "DM Sans", system-ui, sans-serif;
+    font-family: "DM Sans Variable", "DM Sans", system-ui, sans-serif;
     background-color: #E0E5EC;
     color: #3D4852;
     -webkit-font-smoothing: antialiased;
@@ -15,7 +18,7 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+    font-family: "Plus Jakarta Sans Variable", "Plus Jakarta Sans", system-ui, sans-serif;
     font-weight: 800;
     letter-spacing: -0.02em;
     color: #3D4852;
@@ -26,10 +29,10 @@
 :root {
   --bg:           #E0E5EC;
   --fg:           #3D4852;
-  --muted:        #6B7280;
-  --accent:       #6C63FF;
-  --accent-light: #8B84FF;
-  --accent-sec:   #38B2AC;
+  --muted:        #4B5563;
+  --accent:       #4C40C0;
+  --accent-light: #6C63FF;
+  --accent-sec:   #006060;
 
   --shadow-light: rgba(255, 255, 255, 0.5);
   --shadow-dark:  rgb(163, 177, 198, 0.6);
@@ -88,7 +91,7 @@
   justify-content: center;
   background: var(--accent);
   color: #fff;
-  font-family: "DM Sans", system-ui, sans-serif;
+  font-family: "DM Sans Variable", "DM Sans", system-ui, sans-serif;
   font-size: 0.875rem;
   font-weight: 600;
   padding: 14px 32px;
@@ -119,7 +122,7 @@
   justify-content: center;
   background: #E0E5EC;
   color: var(--fg);
-  font-family: "DM Sans", system-ui, sans-serif;
+  font-family: "DM Sans Variable", "DM Sans", system-ui, sans-serif;
   font-size: 0.875rem;
   font-weight: 600;
   padding: 14px 32px;
@@ -145,12 +148,6 @@
   outline-offset: 2px;
 }
 
-/* Legacy aliases — map to new system */
-.btn-outline  { @apply btn-secondary; }
-.btn-red      { @apply btn-primary; }
-.btn-blush    { @apply btn-primary; }
-.btn-gold     { @apply btn-primary; }
-
 /* ─── INPUTS ────────────────────────────────────────── */
 .input {
   width: 100%;
@@ -160,13 +157,13 @@
   padding: 14px 20px;
   outline: none;
   font-size: 0.9rem;
-  font-family: "DM Sans", system-ui, sans-serif;
+  font-family: "DM Sans Variable", "DM Sans", system-ui, sans-serif;
   color: #3D4852;
   box-shadow: var(--neu-inset-deep);
   transition: box-shadow 0.3s ease-out;
   min-height: 48px;
 }
-.input::placeholder { color: #A0AEC0; }
+.input::placeholder { color: #6B7280; }
 .input:focus {
   box-shadow: var(--neu-inset-deep), 0 0 0 2px var(--accent);
 }
@@ -174,19 +171,23 @@
   outline: none;
 }
 
-/* Legacy dark input — now same as .input */
-.input-dark { @apply input; }
-
 /* ─── SECTION TAG ───────────────────────────────────── */
 .section-tag {
   display: inline-block;
   font-size: 0.7rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  font-family: "DM Sans", system-ui, sans-serif;
+  font-family: "DM Sans Variable", "DM Sans", system-ui, sans-serif;
   font-weight: 600;
   color: var(--accent);
   margin-bottom: 10px;
+}
+
+/* ─── ACCESSIBLE LINKS ──────────────────────────────── */
+/* Inline text links must not rely on color alone — underline on hover */
+a:not(.btn-primary):not(.btn-secondary):not([class*="btn"]):not([class*="group"]):hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 /* ─── PAGE HERO ─────────────────────────────────────── */
@@ -223,10 +224,10 @@
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: #E0E5EC; }
 ::-webkit-scrollbar-thumb { background: #B8C2CC; border-radius: 2px; }
-::-webkit-scrollbar-thumb:hover { background: #6C63FF; }
+::-webkit-scrollbar-thumb:hover { background: #4C40C0; }
 
 .scrollbar-hide::-webkit-scrollbar { display: none; }
 .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
 
 /* ─── SELECTION ─────────────────────────────────────── */
-::selection { background: #6C63FF; color: #fff; }
+::selection { background: #4C40C0; color: #fff; }

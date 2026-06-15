@@ -57,7 +57,7 @@ export default function Collection() {
             All Collections
           </motion.h1>
           <motion.p
-            className="text-[#6B7280] text-lg font-medium mt-5 max-w-lg mx-auto"
+            className="text-[#4B5563] text-lg font-medium mt-5 max-w-lg mx-auto"
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.45, ease }}
@@ -76,7 +76,7 @@ export default function Collection() {
             <div className="flex items-center gap-4 mb-6">
               <div className="flex-1 h-px" style={{ background: "linear-gradient(to right, transparent, rgb(163,177,198,0.6))" }} />
               <div className="px-5 py-2 rounded-2xl" style={{ boxShadow: "inset 6px 6px 10px rgb(163,177,198,0.6), inset -6px -6px 10px rgba(255,255,255,0.5)" }}>
-                <span className="font-display font-bold text-xs uppercase tracking-widest text-[#6C63FF]">Label Muskaan Singh</span>
+                <span className="font-display font-bold text-xs uppercase tracking-widest text-[#4C40C0]">Label Muskaan Singh</span>
               </div>
               <div className="flex-1 h-px" style={{ background: "linear-gradient(to left, transparent, rgb(163,177,198,0.6))" }} />
             </div>
@@ -100,14 +100,14 @@ export default function Collection() {
                   whileHover={{ y: -4, boxShadow: "12px 12px 20px rgb(163,177,198,0.7), -12px -12px 20px rgba(255,255,255,0.6)" }}
                 >
                   <div className="px-2 pt-1 text-center">
-                    <h3 className="font-display font-bold text-[#3D4852] group-hover:text-[#6C63FF] transition-colors duration-300 leading-tight" style={{ fontSize: "clamp(0.85rem, 2vw, 1rem)" }}>
+                    <h3 className="font-display font-bold text-[#3D4852] group-hover:text-[#4C40C0] transition-colors duration-300 leading-tight" style={{ fontSize: "clamp(0.85rem, 2vw, 1rem)" }}>
                       {cat.name}
                     </h3>
                   </div>
                   <div className="rounded-[18px] flex items-center justify-center overflow-hidden" style={{ aspectRatio: "1/1", boxShadow: "inset 6px 6px 10px rgb(163,177,198,0.6), inset -6px -6px 10px rgba(255,255,255,0.5)" }}>
-                    <img src={cat.image} alt={cat.name} className="w-full h-full object-contain p-6" />
+                    <img src={cat.image} alt={cat.name} className="w-full h-full object-contain p-6" loading="lazy" width="400" height="400" />
                   </div>
-                  <p className="text-xs font-bold text-[#6C63FF] uppercase tracking-widest text-center pb-1">Shop →</p>
+                  <p className="text-xs font-bold text-[#4C40C0] uppercase tracking-widest text-center pb-1">Shop →</p>
                 </motion.a>
               ))}
             </div>
@@ -117,7 +117,7 @@ export default function Collection() {
           <div className="flex items-center gap-4 my-10">
             <div className="flex-1 h-px" style={{ background: "linear-gradient(to right, transparent, rgb(163,177,198,0.6))" }} />
             <div className="px-5 py-2 rounded-2xl" style={{ boxShadow: "inset 6px 6px 10px rgb(163,177,198,0.6), inset -6px -6px 10px rgba(255,255,255,0.5)" }}>
-              <span className="font-display font-bold text-xs uppercase tracking-widest" style={{ color: "#38B2AC" }}>Ibtida</span>
+              <span className="font-display font-bold text-xs uppercase tracking-widest" style={{ color: "#006060" }}>Ibtida</span>
             </div>
             <div className="flex-1 h-px" style={{ background: "linear-gradient(to left, transparent, rgb(163,177,198,0.6))" }} />
           </div>
@@ -125,7 +125,7 @@ export default function Collection() {
           {/* Ibtida */}
           <div>
             <div className="flex items-center gap-4 mb-6">
-              <span className="font-display font-extrabold text-lg" style={{ color: "#38B2AC" }}>Ibtida</span>
+              <span className="font-display font-extrabold text-lg" style={{ color: "#006060" }}>Ibtida</span>
               <div className="flex-1 h-px" style={{ background: "linear-gradient(to right, rgba(56,178,172,0.4), transparent)" }} />
             </div>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 md:gap-6">
@@ -149,9 +149,9 @@ export default function Collection() {
                     </h3>
                   </div>
                   <div className="rounded-[18px] flex items-center justify-center overflow-hidden" style={{ aspectRatio: "1/1", boxShadow: "inset 6px 6px 10px rgb(163,177,198,0.6), inset -6px -6px 10px rgba(255,255,255,0.5)" }}>
-                    <img src={cat.image} alt={cat.name} className="w-full h-full object-contain p-6" />
+                    <img src={cat.image} alt={cat.name} className="w-full h-full object-contain p-6" loading="lazy" width="400" height="400" />
                   </div>
-                  <p className="text-xs font-bold uppercase tracking-widest text-center pb-1" style={{ color: "#38B2AC" }}>Shop →</p>
+                  <p className="text-xs font-bold uppercase tracking-widest text-center pb-1" style={{ color: "#006060" }}>Shop →</p>
                 </motion.a>
               ))}
             </div>
@@ -177,15 +177,15 @@ export default function Collection() {
           >
             <div>
               <p className="section-tag">Official Store</p>
-              <h2 className="font-display font-extrabold text-[#3D4852] tracking-tight mt-2 group-hover:text-[#6C63FF] transition-colors duration-300" style={{ fontSize: "clamp(1.8rem, 4vw, 3rem)" }}>
+              <h2 className="font-display font-extrabold text-[#3D4852] tracking-tight mt-2 group-hover:text-[#4C40C0] transition-colors duration-300" style={{ fontSize: "clamp(1.8rem, 4vw, 3rem)" }}>
                 Shop the Full Collection
               </h2>
-              <p className="text-[#6B7280] text-sm font-medium mt-2 max-w-md">
+              <p className="text-[#4B5563] text-sm font-medium mt-2 max-w-md">
                 Browse every piece — luxury Chikankari, festive wear, and Ibtida daily wear — all in one place.
               </p>
             </div>
             <div
-              className="shrink-0 px-8 py-4 rounded-2xl font-display font-bold text-[#6C63FF] text-sm uppercase tracking-widest flex items-center gap-2 transition-all duration-300"
+              className="shrink-0 px-8 py-4 rounded-2xl font-display font-bold text-[#4C40C0] text-sm uppercase tracking-widest flex items-center gap-2 transition-all duration-300"
               style={{ boxShadow: "inset 6px 6px 10px rgb(163,177,198,0.6), inset -6px -6px 10px rgba(255,255,255,0.5)" }}
             >
               labelmuskaansingh.in

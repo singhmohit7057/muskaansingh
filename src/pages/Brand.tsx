@@ -109,7 +109,7 @@ export default function Brand() {
             Label<br />Muskaan Singh
           </motion.h1>
           <motion.p
-            className="text-[#6B7280] text-lg font-medium mt-6 max-w-lg leading-relaxed mx-auto"
+            className="text-[#4B5563] text-lg font-medium mt-6 max-w-lg leading-relaxed mx-auto"
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5, ease }}
@@ -127,7 +127,7 @@ export default function Brand() {
             {[["2023","Est."],["KOL","Origin"],[`${platforms.length}+`,"Platforms"]].map(([v,l]) => (
               <div key={l} className="px-7 py-4 rounded-2xl" style={{ boxShadow: "9px 9px 16px rgb(163,177,198,0.6), -9px -9px 16px rgba(255,255,255,0.5)" }}>
                 <p className="font-display font-extrabold text-2xl text-[#3D4852]">{v}</p>
-                <p className="text-[#6B7280] text-xs font-medium mt-1 uppercase tracking-wider">{l}</p>
+                <p className="text-[#4B5563] text-xs font-medium mt-1 uppercase tracking-wider">{l}</p>
               </div>
             ))}
           </motion.div>
@@ -149,15 +149,15 @@ export default function Brand() {
               className="relative h-72 rounded-[24px] flex items-center justify-center overflow-hidden"
               style={{ boxShadow: "inset 10px 10px 20px rgb(163,177,198,0.7), inset -10px -10px 20px rgba(255,255,255,0.6)" }}
             >
-              <img src="/lms-800_800.png" alt="" className="w-full h-full object-contain p-8" aria-hidden="true" />
+              <img src="/lms-800_800.webp" alt="Label Muskaan Singh logo" className="w-full h-full object-contain p-8" loading="lazy" width="800" height="800" />
             </div>
 
             <div>
               <SectionTitle subtitle="The Brand" title="Modern Ethnic, Redefined" />
-              <p className="text-[#6B7280] leading-relaxed mb-4 font-medium">
+              <p className="text-[#4B5563] leading-relaxed mb-4 font-medium">
                 Label Muskaan Singh was built on one conviction: Indian craftsmanship is not heritage to be preserved behind glass — it is a living art that belongs in the modern wardrobe.
               </p>
-              <p className="text-[#6B7280] leading-relaxed mb-6 text-sm">
+              <p className="text-[#4B5563] leading-relaxed mb-6 text-sm">
                 The label began with luxury Chikankari — handcrafted, intricate, rooted in the needlework tradition of Lucknow. Every piece since has carried that same DNA: detail-first, designed to last.
               </p>
 
@@ -198,10 +198,10 @@ export default function Brand() {
                   className="w-14 h-14 rounded-2xl flex items-center justify-center mb-5"
                   style={{ boxShadow: "inset 6px 6px 10px rgb(163,177,198,0.6), inset -6px -6px 10px rgba(255,255,255,0.5)" }}
                 >
-                  <span className="font-display font-extrabold text-[#6C63FF] text-lg">{item.num}</span>
+                  <span className="font-display font-extrabold text-[#4C40C0] text-lg">{item.num}</span>
                 </div>
-                <h3 className="font-display font-bold text-[#3D4852] text-xl mb-3 group-hover:text-[#6C63FF] transition-colors">{item.title}</h3>
-                <p className="text-[#6B7280] text-sm leading-relaxed">{item.desc}</p>
+                <h3 className="font-display font-bold text-[#3D4852] text-xl mb-3 group-hover:text-[#4C40C0] transition-colors">{item.title}</h3>
+                <p className="text-[#4B5563] text-sm leading-relaxed">{item.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -223,27 +223,27 @@ export default function Brand() {
               className="relative h-72 rounded-[24px] flex items-center justify-center overflow-hidden order-first md:order-last"
               style={{ boxShadow: "inset 10px 10px 20px rgb(163,177,198,0.7), inset -10px -10px 20px rgba(255,255,255,0.6)" }}
             >
-              <img src="/ibtida-800_800.png" alt="" className="w-full h-full object-contain p-8" aria-hidden="true" />
+              <img src="/ibtida-800_800.webp" alt="Ibtida sub-brand logo" className="w-full h-full object-contain p-8" loading="lazy" width="800" height="800" />
             </div>
 
             <div>
-              <span className="section-tag" style={{ color: "#38B2AC" }}>Sub Brand</span>
+              <span className="section-tag" style={{ color: "#006060" }}>Sub Brand</span>
               <h2 className="font-display font-extrabold text-[#3D4852] tracking-tight mt-2" style={{ fontSize: "clamp(2.5rem, 7vw, 5rem)" }}>
                 Ibtida
               </h2>
-              <div className="w-8 h-0.5 rounded-full mt-3 mb-5" style={{ background: "#38B2AC" }} />
-              <p className="text-[#6B7280] leading-relaxed mb-4 font-medium">
-                <em className="not-italic font-bold" style={{ color: "#38B2AC" }}>Ibtida</em> — meaning "a new beginning."
+              <div className="w-8 h-0.5 rounded-full mt-3 mb-5" style={{ background: "#006060" }} />
+              <p className="text-[#4B5563] leading-relaxed mb-4 font-medium">
+                <em className="not-italic font-bold" style={{ color: "#006060" }}>Ibtida</em> — meaning "a new beginning."
               </p>
-              <p className="text-[#6B7280] leading-relaxed mb-4 text-sm">
+              <p className="text-[#4B5563] leading-relaxed mb-4 text-sm">
                 Launched in 2025, Ibtida is the everyday expression of Label Muskaan Singh — accessible, wearable, designed for daily life without compromising on craft.
               </p>
-              <p className="text-[#6B7280] leading-relaxed mb-8 text-sm">
+              <p className="text-[#4B5563] leading-relaxed mb-8 text-sm">
                 Where the core label is occasion wear built for moments, Ibtida is for the in-between — the mornings, the meetings, the everyday.
               </p>
               <div className="flex gap-4 flex-wrap">
                 <a href="https://instagram.com/_ibtidaofficial_" target="_blank" rel="noopener noreferrer"
-                  className="btn-primary" style={{ background: "#38B2AC" }}>
+                  className="btn-primary" style={{ background: "#006060" }}>
                   Follow @_ibtidaofficial_
                 </a>
                 <Link to="/collection" className="btn-secondary">Shop Ibtida</Link>
@@ -284,7 +284,7 @@ export default function Brand() {
                     transition={{ duration: 0.5, delay: i * 0.08, ease }}
                     whileHover={{ y: -2, boxShadow: "8px 8px 14px rgb(163,177,198,0.7), -8px -8px 14px rgba(255,255,255,0.6)" }}
                   >
-                    <p.icon size={14} className="text-[#6C63FF]" />
+                    <p.icon size={14} className="text-[#4C40C0]" />
                     <span className="text-sm font-semibold text-[#3D4852]">{p.label}</span>
                   </motion.a>
                 ))}

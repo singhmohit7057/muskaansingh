@@ -96,7 +96,7 @@ export default function ContactPage() {
             Let's Connect
           </motion.h1>
           <motion.p
-            className="text-[#6B7280] text-lg font-medium mt-5"
+            className="text-[#4B5563] text-lg font-medium mt-5"
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.45, ease }}
@@ -123,9 +123,9 @@ export default function ContactPage() {
                 className="w-12 h-12 rounded-2xl flex items-center justify-center mb-5"
                 style={{ boxShadow: "inset 6px 6px 10px rgb(163,177,198,0.6), inset -6px -6px 10px rgba(255,255,255,0.5)" }}
               >
-                <col.icon size={18} className="text-[#6C63FF]" />
+                <col.icon size={18} className="text-[#4C40C0]" />
               </div>
-              <p className="text-xs font-bold text-[#6B7280] uppercase tracking-widest mb-3">{col.label}</p>
+              <p className="text-xs font-bold text-[#4B5563] uppercase tracking-widest mb-3">{col.label}</p>
               <div className="space-y-2">
                 {col.items.map((item) =>
                   item.href ? (
@@ -134,12 +134,12 @@ export default function ContactPage() {
                       href={item.href}
                       target={item.href.startsWith("http") ? "_blank" : undefined}
                       rel="noopener noreferrer"
-                      className="block text-sm font-medium text-[#3D4852] hover:text-[#6C63FF] transition-colors"
+                      className="block text-sm font-medium text-[#3D4852] hover:text-[#4C40C0] transition-colors"
                     >
                       {item.text}
                     </a>
                   ) : (
-                    <p key={item.text} className="text-sm text-[#6B7280]">{item.text}</p>
+                    <p key={item.text} className="text-sm text-[#4B5563]">{item.text}</p>
                   )
                 )}
               </div>
@@ -166,7 +166,7 @@ export default function ContactPage() {
               <h2 className="font-display font-extrabold text-[#3D4852] tracking-tight mt-1" style={{ fontSize: "clamp(1.6rem, 4vw, 2.5rem)" }}>
                 General Inquiry
               </h2>
-              <p className="text-[#6B7280] text-sm font-medium mt-3 leading-relaxed">
+              <p className="text-[#4B5563] text-sm font-medium mt-3 leading-relaxed">
                 Have a question about our collections, sizing, or want to know more about Label Muskaan Singh?
               </p>
             </div>
@@ -187,7 +187,7 @@ export default function ContactPage() {
               <h2 className="font-display font-extrabold text-[#3D4852] tracking-tight mt-1" style={{ fontSize: "clamp(1.6rem, 4vw, 2.5rem)" }}>
                 Work With Me
               </h2>
-              <p className="text-[#6B7280] text-sm font-medium mt-3 leading-relaxed">
+              <p className="text-[#4B5563] text-sm font-medium mt-3 leading-relaxed">
                 Brands, creators, and collaborators — reach out for campaigns, collab collections, or content partnerships.
               </p>
             </div>
@@ -201,7 +201,7 @@ export default function ContactPage() {
             className="rounded-2xl px-6 py-4 text-center"
             style={{ boxShadow: "inset 6px 6px 10px rgb(163,177,198,0.6), inset -6px -6px 10px rgba(255,255,255,0.5)" }}
           >
-            <p className="text-xs font-semibold text-[#6B7280] uppercase tracking-widest">
+            <p className="text-xs font-semibold text-[#4B5563] uppercase tracking-widest">
               We respond within 24–48 hours · All inquiries are welcome
             </p>
           </div>

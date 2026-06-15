@@ -65,7 +65,7 @@ export default function About() {
             Muskaan Singh
           </motion.h1>
           <motion.p
-            className="text-[#6B7280] text-lg font-medium mt-6 max-w-xl mx-auto leading-relaxed"
+            className="text-[#4B5563] text-lg font-medium mt-6 max-w-xl mx-auto leading-relaxed"
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.4, ease }}
@@ -87,7 +87,7 @@ export default function About() {
                 style={{ boxShadow: "9px 9px 16px rgb(163,177,198,0.6), -9px -9px 16px rgba(255,255,255,0.5)" }}
               >
                 <p className="font-display font-extrabold text-2xl text-[#3D4852]">{v}</p>
-                <p className="text-[#6B7280] text-xs font-medium mt-1 uppercase tracking-wider">{l}</p>
+                <p className="text-[#4B5563] text-xs font-medium mt-1 uppercase tracking-wider">{l}</p>
               </div>
             ))}
           </motion.div>
@@ -110,18 +110,18 @@ export default function About() {
               className="relative h-72 rounded-[24px] flex items-center justify-center overflow-hidden"
               style={{ boxShadow: "inset 10px 10px 20px rgb(163,177,198,0.7), inset -10px -10px 20px rgba(255,255,255,0.6)" }}
             >
-              <img src="/muskaan/Muskaan-Singh.jpg" alt="" className="w-full h-full object-contain p-8" aria-hidden="true" />
+              <img src="/muskaan/Muskaan-Singh.webp" alt="Muskaan Singh" className="w-full h-full object-contain p-8" loading="lazy" width="400" height="400" />
             </div>
 
             <div>
               <SectionTitle subtitle="The Founder" title="My Journey" />
-              <p className="text-[#6B7280] leading-relaxed mb-4 font-medium">
+              <p className="text-[#4B5563] leading-relaxed mb-4 font-medium">
                 Label Muskaan Singh began with a simple, stubborn belief — that Indian craftsmanship deserves a place in the modern wardrobe.
               </p>
-              <p className="text-[#6B7280] leading-relaxed mb-4 text-sm">
+              <p className="text-[#4B5563] leading-relaxed mb-4 text-sm">
                 After graduating in fashion design from Amity University, Kolkata, I built everything from scratch — the website, the brand identity, the first collection. Luxury Chikankari came first: intricate, handcrafted, steeped in tradition.
               </p>
-              <p className="text-[#6B7280] leading-relaxed mb-8 text-sm">
+              <p className="text-[#4B5563] leading-relaxed mb-8 text-sm">
                 By 2025, Ibtida was born — an extension of the same DNA, made for everyday life. Two brands, one purpose: clothing that feels like you.
               </p>
               {/* Pull quote */}
@@ -132,7 +132,7 @@ export default function About() {
                 <p className="font-display font-bold text-[#3D4852] text-lg leading-relaxed">
                   "Craft is not a technique — it's a conversation between the maker and the wearer."
                 </p>
-                <p className="text-[#6B7280] text-xs font-semibold uppercase tracking-wider mt-3">Muskaan Singh · Founder</p>
+                <p className="text-[#4B5563] text-xs font-semibold uppercase tracking-wider mt-3">Muskaan Singh · Founder</p>
               </div>
             </div>
           </motion.div>
@@ -161,10 +161,10 @@ export default function About() {
                   className="w-14 h-14 rounded-2xl flex items-center justify-center mb-5"
                   style={{ boxShadow: "inset 6px 6px 10px rgb(163,177,198,0.6), inset -6px -6px 10px rgba(255,255,255,0.5)" }}
                 >
-                  <span className="font-display font-extrabold text-[#6C63FF] text-lg">{p.num}</span>
+                  <span className="font-display font-extrabold text-[#4C40C0] text-lg">{p.num}</span>
                 </div>
-                <h3 className="font-display font-bold text-[#3D4852] text-xl mb-3 group-hover:text-[#6C63FF] transition-colors duration-300">{p.title}</h3>
-                <p className="text-[#6B7280] text-sm leading-relaxed">{p.desc}</p>
+                <h3 className="font-display font-bold text-[#3D4852] text-xl mb-3 group-hover:text-[#4C40C0] transition-colors duration-300">{p.title}</h3>
+                <p className="text-[#4B5563] text-sm leading-relaxed">{p.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -189,9 +189,9 @@ export default function About() {
                 transition={{ duration: 0.6, delay: i * 0.1, ease }}
                 whileHover={{ y: -3 }}
               >
-                <p className="font-display font-extrabold text-3xl text-[#6C63FF] mb-3">{item.year}</p>
+                <p className="font-display font-extrabold text-3xl text-[#4C40C0] mb-3">{item.year}</p>
                 <h4 className="font-display font-bold text-[#3D4852] text-base mb-2">{item.title}</h4>
-                <p className="text-[#6B7280] text-sm leading-relaxed">{item.desc}</p>
+                <p className="text-[#4B5563] text-sm leading-relaxed">{item.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -210,15 +210,15 @@ export default function About() {
             transition={{ duration: 0.8, ease }}
           >
             <div>
-              <span className="section-tag" style={{ color: "#38B2AC" }}>Content Creator</span>
+              <span className="section-tag" style={{ color: "#006060" }}>Content Creator</span>
               <h2 className="font-display font-extrabold text-[#3D4852] tracking-tight mt-2 mb-4" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)" }}>
                 Beyond the Label
               </h2>
-              <div className="w-8 h-0.5 rounded-full mb-6" style={{ background: "#38B2AC" }} />
-              <p className="text-[#6B7280] leading-relaxed mb-4 font-medium">
+              <div className="w-8 h-0.5 rounded-full mb-6" style={{ background: "#006060" }} />
+              <p className="text-[#4B5563] leading-relaxed mb-4 font-medium">
                 Muskaan shares the world of fashion, design, and everyday elegance on Instagram — from behind-the-scenes of the label to content that celebrates the women who wear it.
               </p>
-              <p className="text-[#6B7280] leading-relaxed mb-8 text-sm">
+              <p className="text-[#4B5563] leading-relaxed mb-8 text-sm">
                 Follow along on all three channels for collections, reels, and the story as it unfolds.
               </p>
               <div className="space-y-3">
@@ -234,8 +234,8 @@ export default function About() {
                     rel="noopener noreferrer"
                     className="flex items-center gap-3 group"
                   >
-                    <span className="text-xs font-bold text-[#6C63FF] group-hover:text-[#8B84FF] transition-colors">{acc.handle}</span>
-                    <span className="text-[#A0AEC0] text-xs">· {acc.label}</span>
+                    <span className="text-xs font-bold text-[#4C40C0] group-hover:text-[#6C63FF] transition-colors">{acc.handle}</span>
+                    <span className="text-[#4B5563] text-xs">· {acc.label}</span>
                   </a>
                 ))}
               </div>
@@ -246,7 +246,7 @@ export default function About() {
               className="relative h-64 rounded-[24px] flex items-center justify-center overflow-hidden"
               style={{ boxShadow: "inset 10px 10px 20px rgb(163,177,198,0.7), inset -10px -10px 20px rgba(255,255,255,0.6)" }}
             >
-              <img src="/muskaan/muskaansingh97.png" alt="" className="w-full h-full object-contain p-8" aria-hidden="true" />
+              <img src="/muskaan/muskaansingh97.webp" alt="Muskaan Singh content creator on Instagram" className="w-full h-full object-contain p-8" loading="lazy" width="400" height="400" />
             </div>
           </motion.div>
         </div>

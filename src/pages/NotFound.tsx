@@ -25,7 +25,7 @@ export default function NotFound() {
             style={{ boxShadow: "inset 10px 10px 20px rgb(163,177,198,0.7), inset -10px -10px 20px rgba(255,255,255,0.6)" }}
           >
             <span
-              className="font-display font-extrabold text-[#6C63FF] leading-none"
+              className="font-display font-extrabold text-[#4C40C0] leading-none"
               style={{ fontSize: "clamp(6rem, 20vw, 10rem)" }}
             >
               404
@@ -50,7 +50,7 @@ export default function NotFound() {
           Looks like you're lost
         </motion.h1>
         <motion.p
-          className="text-[#6B7280] text-base font-medium mb-10 leading-relaxed"
+          className="text-[#4B5563] text-base font-medium mb-10 leading-relaxed"
           initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.35, ease }}
         >

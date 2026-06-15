@@ -7,9 +7,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        display: ["Plus Jakarta Sans", "system-ui", "sans-serif"],
-        sans:    ["DM Sans", "system-ui", "sans-serif"],
-        serif:   ["Plus Jakarta Sans", "system-ui", "sans-serif"],
+        display: ["Plus Jakarta Sans Variable", "Plus Jakarta Sans", "system-ui", "sans-serif"],
+        sans:    ["DM Sans Variable", "DM Sans", "system-ui", "sans-serif"],
+        serif:   ["Plus Jakarta Sans Variable", "Plus Jakarta Sans", "system-ui", "sans-serif"],
       },
       colors: {
         neu: {

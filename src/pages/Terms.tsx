@@ -54,7 +54,7 @@ export default function Terms() {
             Terms of Use
           </motion.h1>
           <motion.p
-            className="text-[#6B7280] text-sm text-center mb-12"
+            className="text-[#4B5563] text-sm text-center mb-12"
             initial={{ opacity: 0 }} animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
           >
@@ -68,7 +68,7 @@ export default function Terms() {
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2, ease }}
           >
-            <p className="text-[#6B7280] leading-relaxed">
+            <p className="text-[#4B5563] leading-relaxed">
               This website represents Muskaan Singh and her work. By accessing this site,
               you agree to the following terms.
             </p>
@@ -90,11 +90,11 @@ export default function Terms() {
                     className="w-9 h-9 rounded-xl flex items-center justify-center shrink-0 mt-0.5"
                     style={{ boxShadow: "inset 6px 6px 10px rgb(163,177,198,0.6), inset -6px -6px 10px rgba(255,255,255,0.5)" }}
                   >
-                    <span className="font-display font-bold text-xs text-[#6C63FF]">{String(i + 1).padStart(2, "0")}</span>
+                    <span className="font-display font-bold text-xs text-[#4C40C0]">{String(i + 1).padStart(2, "0")}</span>
                   </div>
                   <div>
                     <h2 className="font-display font-bold text-[#3D4852] text-lg mb-2">{s.title}</h2>
-                    <p className="text-[#6B7280] text-sm leading-relaxed">{s.body}</p>
+                    <p className="text-[#4B5563] text-sm leading-relaxed">{s.body}</p>
                   </div>
                 </div>
               </motion.div>

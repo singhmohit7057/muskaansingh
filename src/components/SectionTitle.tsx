@@ -36,7 +36,7 @@ export default function SectionTitle({ title, subtitle, centered, large }: Props
       </motion.h2>
 
       <motion.div
-        className={`mt-4 h-0.5 rounded-full bg-[#6C63FF] ${centered ? "mx-auto" : ""}`}
+        className={`mt-4 h-0.5 rounded-full bg-[#4C40C0] ${centered ? "mx-auto" : ""}`}
         style={{ width: 0 }}
         whileInView={{ width: 40 }}
         viewport={{ once: true }}

@@ -38,6 +38,7 @@ export default function App() {
       <ScrollToTop />
       <RedirectHandler />
       <Navbar />
+      <main>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -51,6 +52,7 @@ export default function App() {
         <Route path="/cookies" element={<Cookies />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      </main>
       <Footer />
     </BrowserRouter>
   )
