@@ -5,6 +5,213 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex" />
     <title>Muskaan Singh — Admin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --neu-bg:     #E0E5EC;
+        --neu-dark:   #a3b1c6;
+        --neu-light:  #ffffff;
+        --accent:     #4C40C0;
+        --accent-lg:  #6C63FF;
+        --text:       #3D4852;
+        --text-muted: #6B7280;
+        --shadow-out: 6px 6px 14px var(--neu-dark), -6px -6px 14px var(--neu-light);
+        --shadow-in:  inset 4px 4px 9px var(--neu-dark), inset -4px -4px 9px var(--neu-light);
+      }
+
+      *, *::before, *::after {
+        font-family: 'DM Sans', sans-serif !important;
+        box-sizing: border-box;
+      }
+
+      html, body, #nc-root {
+        background: var(--neu-bg) !important;
+        color: var(--text) !important;
+        min-height: 100vh;
+      }
+
+      /* Kill any dark backgrounds */
+      #nc-root > div,
+      #nc-root > div > div {
+        background: var(--neu-bg) !important;
+      }
+
+      /* ── Header ───────────────────────── */
+      header {
+        background: var(--neu-bg) !important;
+        box-shadow: 0 4px 14px var(--neu-dark), 0 -2px 6px var(--neu-light) !important;
+        border-bottom: none !important;
+      }
+
+      header h1, header span {
+        font-family: 'Plus Jakarta Sans', sans-serif !important;
+        color: var(--text) !important;
+      }
+
+      /* ── Sidebar / Nav ────────────────── */
+      nav, aside {
+        background: var(--neu-bg) !important;
+        border-right: none !important;
+      }
+
+      nav a, nav button {
+        color: var(--text) !important;
+        border-radius: 12px !important;
+        transition: all 0.2s ease !important;
+        font-weight: 500 !important;
+      }
+
+      nav a:hover, nav button:hover {
+        background: rgba(76, 64, 192, 0.07) !important;
+        color: var(--accent) !important;
+      }
+
+      nav a[class*="active"], nav [aria-current], nav [class*="isActive"] {
+        color: var(--accent) !important;
+        background: rgba(76, 64, 192, 0.1) !important;
+        box-shadow: var(--shadow-out) !important;
+      }
+
+      /* ── Buttons ──────────────────────── */
+      button {
+        border-radius: 50px !important;
+        font-weight: 600 !important;
+        letter-spacing: 0.02em !important;
+        transition: all 0.2s ease !important;
+        border: none !important;
+      }
+
+      /* Primary / save button */
+      button[class*="primary"],
+      button[type="submit"],
+      [class*="ToolbarButton"]:first-child,
+      [class*="PublishButton"] {
+        background: var(--accent) !important;
+        color: #fff !important;
+        box-shadow: 4px 4px 10px var(--neu-dark), -2px -2px 6px var(--neu-light) !important;
+      }
+
+      button[class*="primary"]:hover,
+      button[type="submit"]:hover {
+        background: var(--accent-lg) !important;
+        transform: translateY(-1px) !important;
+        box-shadow: 6px 6px 14px var(--neu-dark), -3px -3px 8px var(--neu-light) !important;
+      }
+
+      /* Secondary / outline buttons */
+      button[class*="secondary"],
+      button[class*="delete"],
+      button[class*="cancel"] {
+        background: var(--neu-bg) !important;
+        color: var(--text) !important;
+        box-shadow: var(--shadow-out) !important;
+      }
+
+      button[class*="secondary"]:hover {
+        box-shadow: 8px 8px 16px var(--neu-dark), -8px -8px 16px var(--neu-light) !important;
+      }
+
+      /* ── Cards / list items ───────────── */
+      [class*="Card"],
+      [class*="ListItem"],
+      [class*="EntryCard"],
+      [role="listitem"],
+      article {
+        background: var(--neu-bg) !important;
+        border-radius: 18px !important;
+        box-shadow: var(--shadow-out) !important;
+        border: none !important;
+        transition: box-shadow 0.2s ease !important;
+      }
+
+      [class*="Card"]:hover,
+      [class*="ListItem"]:hover {
+        box-shadow: 10px 10px 20px var(--neu-dark), -10px -10px 20px var(--neu-light) !important;
+      }
+
+      /* ── Inputs ───────────────────────── */
+      input:not([type="checkbox"]):not([type="radio"]),
+      textarea,
+      select {
+        background: var(--neu-bg) !important;
+        border: none !important;
+        border-radius: 10px !important;
+        box-shadow: var(--shadow-in) !important;
+        color: var(--text) !important;
+        padding: 10px 14px !important;
+        outline: none !important;
+      }
+
+      input:focus,
+      textarea:focus,
+      select:focus {
+        box-shadow: var(--shadow-in), 0 0 0 2px rgba(76, 64, 192, 0.25) !important;
+      }
+
+      /* ── Labels ───────────────────────── */
+      label {
+        color: var(--text) !important;
+        font-weight: 600 !important;
+        font-size: 0.85rem !important;
+        letter-spacing: 0.04em !important;
+        text-transform: uppercase !important;
+      }
+
+      /* ── Headings ─────────────────────── */
+      h1, h2, h3, h4 {
+        font-family: 'Plus Jakarta Sans', sans-serif !important;
+        color: var(--text) !important;
+      }
+
+      /* ── Links ────────────────────────── */
+      a { color: var(--accent) !important; }
+      a:hover { color: var(--accent-lg) !important; }
+
+      /* ── Tags / badges ────────────────── */
+      [class*="tag"], [class*="Tag"],
+      [class*="badge"], [class*="Badge"] {
+        background: rgba(76, 64, 192, 0.1) !important;
+        color: var(--accent) !important;
+        border-radius: 50px !important;
+        border: 1px solid rgba(76, 64, 192, 0.2) !important;
+        font-size: 0.75rem !important;
+        font-weight: 600 !important;
+      }
+
+      /* ── Editor toolbar ───────────────── */
+      [class*="Toolbar"], [class*="EditorToolbar"] {
+        background: var(--neu-bg) !important;
+        box-shadow: 0 3px 8px var(--neu-dark) !important;
+        border: none !important;
+      }
+
+      /* ── Scrollbar ────────────────────── */
+      ::-webkit-scrollbar { width: 5px; height: 5px; }
+      ::-webkit-scrollbar-track { background: var(--neu-bg); }
+      ::-webkit-scrollbar-thumb {
+        background: var(--neu-dark);
+        border-radius: 99px;
+      }
+
+      /* ── Login screen ─────────────────── */
+      [class*="AuthenticationPage"],
+      [class*="Login"],
+      [class*="login"] {
+        background: var(--neu-bg) !important;
+      }
+
+      /* Login button */
+      [class*="AuthenticationPage"] button,
+      [class*="Login"] button {
+        background: var(--accent) !important;
+        color: #fff !important;
+        padding: 14px 40px !important;
+        font-size: 1rem !important;
+        box-shadow: 6px 6px 14px var(--neu-dark), -3px -3px 8px var(--neu-light) !important;
+      }
+    </style>
     <script>window.CMS_MANUAL_INIT = true;</script>
   </head>
   <body>
