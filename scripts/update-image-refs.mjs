@@ -21,7 +21,7 @@ async function findSourceFiles(dir) {
       results.push(...(await findSourceFiles(fullPath)));
     } else if (entry.isFile()) {
       const ext = extname(entry.name).toLowerCase();
-      if ([".tsx", ".ts", ".jsx", ".js"].includes(ext)) {
+      if ([".tsx", ".ts", ".jsx", ".js", ".json"].includes(ext)) {
         results.push(fullPath);
       }
     }

@@ -1,0 +1,14 @@
+{
+  "items": [
+    { "id": 1,  "name": "Bhagyashree",               "image": "/celeb/BhagyaShree.webp",               "link": "https://www.instagram.com/p/" },
+    { "id": 2,  "name": "Mimi Chakraborty",           "image": "/celeb/Mimi_Chakraborty.webp",          "link": "https://www.instagram.com/p/DTz7O0ek_nA/" },
+    { "id": 3,  "name": "Ayoshi Talukdar",            "image": "/celeb/Ayoshi_Talukdar.webp",           "link": "https://www.instagram.com/p/C6DSsGBr2-q/" },
+    { "id": 4,  "name": "Madhumita Sarcar",           "image": "/celeb/Madhumita_Sarcar.webp",          "link": "https://www.instagram.com/p/" },
+    { "id": 5,  "name": "Naina Ganguly",              "image": "/celeb/Naina_Ganguly.webp",             "link": "https://www.instagram.com/p/DFNIJwTz_fo/" },
+    { "id": 6,  "name": "Sauraseni Maitra",           "image": "/celeb/Sauraseni_Maitra.webp",          "link": "https://www.instagram.com/p/DIlcwzRzANF/" },
+    { "id": 7,  "name": "Srabanti Gintu Chatterjee",  "image": "/celeb/Srabanti_Gintu_Chatterjee.webp", "link": "https://www.instagram.com/p/C5pqtQKr4or/" },
+    { "id": 8,  "name": "Sanchita Baidya",            "image": "/celeb/Sanchita_Baidya.webp",           "link": "https://www.instagram.com/p/C8Bhap_St4S/" },
+    { "id": 9,  "name": "Sohini Guha Roy",            "image": "/celeb/Sohini_Guha_Roy.webp",           "link": "https://www.instagram.com/reel/DAN5yclyr2u/" },
+    { "id": 10, "name": "Swastika Ghosh",             "image": "/celeb/Swastika_Ghosh.webp",            "link": "https://www.instagram.com/p/" }
+  ]
+}

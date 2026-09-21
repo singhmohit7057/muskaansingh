@@ -1,0 +1,126 @@
+backend:
+  name: github
+  repo: singhmohit7057/muskaansingh
+  branch: main
+  base_url: https://www.muskaansingh.in
+  auth_endpoint: api/auth
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "categories"
+    label: "Collection Categories"
+    files:
+      - label: "Categories"
+        name: "categories"
+        file: "src/data/categories.json"
+        fields:
+          - label: "Items"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "ID",         name: "id",    widget: "number", value_type: "int" }
+              - { label: "Name",       name: "name",  widget: "string" }
+              - label: "Image"
+                name: "image"
+                widget: "image"
+                media_folder: "/public/category"
+                public_folder: "/category"
+              - { label: "Shop Link",  name: "link",  widget: "string" }
+              - label: "Brand"
+                name: "brand"
+                widget: "select"
+                options:
+                  - { label: "Label Muskaan Singh", value: "lms" }
+                  - { label: "Ibtida",              value: "ibtida" }
+
+  - name: "press"
+    label: "Press Coverage"
+    files:
+      - label: "Press Items"
+        name: "press"
+        file: "src/data/press.json"
+        fields:
+          - label: "Items"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "ID",          name: "id",          widget: "number", value_type: "int" }
+              - { label: "Title",       name: "title",       widget: "string" }
+              - { label: "Publication", name: "publication", widget: "string" }
+              - { label: "Date",        name: "date",        widget: "string" }
+              - label: "Image"
+                name: "image"
+                widget: "image"
+                media_folder: "/public"
+                public_folder: "/"
+              - { label: "Article Link", name: "link", widget: "string" }
+
+  - name: "instagram"
+    label: "Instagram"
+    files:
+      - label: "Instagram Data"
+        name: "instagram"
+        file: "src/data/instagram.json"
+        fields:
+          - label: "Celebrities"
+            name: "celebrities"
+            widget: "list"
+            fields:
+              - { label: "ID",   name: "id",   widget: "number", value_type: "int" }
+              - { label: "Name", name: "name", widget: "string" }
+              - label: "Photo"
+                name: "image"
+                widget: "image"
+                media_folder: "/public/celeb"
+                public_folder: "/celeb"
+              - { label: "Instagram Post Link", name: "link", widget: "string" }
+          - label: "Instagram Posts"
+            name: "instagramPosts"
+            widget: "list"
+            fields:
+              - { label: "ID", name: "id", widget: "number", value_type: "int" }
+              - label: "Thumbnail"
+                name: "image"
+                widget: "image"
+                media_folder: "/public/instagram"
+                public_folder: "/instagram"
+              - { label: "Post Link", name: "link", widget: "string" }
+              - label: "Account"
+                name: "account"
+                widget: "select"
+                options:
+                  - { label: "Label Muskaan Singh", value: "labelmuskaansingh" }
+                  - { label: "Ibtida Official",     value: "_ibtidaofficial_" }
+                  - { label: "Muskaan Singh",       value: "muskaansingh97" }
+
+  - name: "collabs"
+    label: "Brand Collaborations"
+    files:
+      - label: "Collaborations"
+        name: "collabs"
+        file: "src/data/collabs.json"
+        fields:
+          - label: "Items"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "ID",          name: "id",          widget: "number", value_type: "int" }
+              - { label: "Brand Name",  name: "brand",       widget: "string" }
+              - label: "Category"
+                name: "category"
+                widget: "select"
+                options: ["Fashion", "Beauty", "Lifestyle"]
+              - label: "Content Types"
+                name: "type"
+                widget: "select"
+                multiple: true
+                options: ["Reel", "Post", "Story", "Ecom"]
+              - { label: "Description", name: "description", widget: "text" }
+              - label: "Links"
+                name: "links"
+                widget: "list"
+                field:
+                  label: "URL"
+                  widget: "string"
