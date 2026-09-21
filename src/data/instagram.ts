@@ -18,8 +18,9 @@ export type InstagramPost = {
 };
 
 export const celebrities = celebData.items as unknown as Celebrity[];
-export const instagramPosts = [
-  ...lmsData.items,
-  ...ibtidaData.items,
-  ...personalData.items,
-] as unknown as InstagramPost[];
+
+export const instagramPosts: InstagramPost[] = [
+  ...lmsData.items.map(p => ({ ...p, account: 'labelmuskaansingh' as const })),
+  ...ibtidaData.items.map(p => ({ ...p, account: '_ibtidaofficial_' as const })),
+  ...personalData.items.map(p => ({ ...p, account: 'muskaansingh97' as const })),
+];

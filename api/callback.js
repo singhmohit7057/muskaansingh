@@ -1,3 +1,5 @@
+const ALLOWED_USER = 'singhmohit7057';
+
 export default async function handler(req, res) {
   const { code } = req.query;
 
@@ -16,18 +18,25 @@ export default async function handler(req, res) {
   res.setHeader('Content-Type', 'text/html');
 
   if (!access_token) {
-    res.send(`<!doctype html><html><body><script>
-      window.opener && window.opener.postMessage(
-        'authorization:github:error:' + JSON.stringify({ message: ${JSON.stringify(error ?? 'OAuth failed')} }),
-        '*'
-      );
-      window.close();
-    </script></body></html>`);
+    res.send(errorPage(error ?? 'OAuth failed'));
     return;
   }
 
-  // Decap CMS handshake: send 'authorizing:github' first, then reply with token
-  // when the CMS responds with its origin so we can target the correct window.
+  // Verify the GitHub user is the allowed admin
+  const userRes = await fetch('https://api.github.com/user', {
+    headers: { Authorization: `Bearer ${access_token}`, 'User-Agent': 'muskaansingh-admin' },
+  });
+  const { login } = await userRes.json();
+
+  if (login !== ALLOWED_USER) {
+    res.status(403).send(`<!doctype html><html><body>
+      <h2 style="font-family:sans-serif;color:#c00;text-align:center;margin-top:40vh">
+        Access denied.
+      </h2>
+    </body></html>`);
+    return;
+  }
+
   const content = JSON.stringify({ token: access_token, provider: 'github' });
 
   res.send(`<!doctype html><html><body><script>
@@ -40,4 +49,14 @@ export default async function handler(req, res) {
       window.opener && window.opener.postMessage('authorizing:github', '*');
     })();
   </script></body></html>`);
+}
+
+function errorPage(message) {
+  return `<!doctype html><html><body><script>
+    window.opener && window.opener.postMessage(
+      'authorization:github:error:' + JSON.stringify({ message: ${JSON.stringify(message)} }),
+      '*'
+    );
+    window.close();
+  </script></body></html>`;
 }

@@ -1,10 +1,10 @@
 {
   "items": [
-    { "id": 1, "image": "/instagram/lms_1.webp", "link": "https://www.instagram.com/p/C_Ald1zSF5G/",  "account": "labelmuskaansingh" },
-    { "id": 2, "image": "/instagram/lms_2.webp", "link": "https://www.instagram.com/p/DOqIZLUkzEa/",  "account": "labelmuskaansingh" },
-    { "id": 3, "image": "/instagram/lms_3.webp", "link": "https://www.instagram.com/p/C0lfKrRybzi/",  "account": "labelmuskaansingh" },
-    { "id": 4, "image": "/instagram/lms_4.webp", "link": "https://www.instagram.com/p/C1eS73kyeci/",  "account": "labelmuskaansingh" },
-    { "id": 5, "image": "/instagram/lms_5.webp", "link": "https://www.instagram.com/p/C1UBPuWSuEJ/", "account": "labelmuskaansingh" },
-    { "id": 6, "image": "/instagram/lms_6.webp", "link": "https://www.instagram.com/p/C2t0UncL5bJ/", "account": "labelmuskaansingh" }
+    { "id": 1, "image": "/instagram/lms_1.webp", "link": "https://www.instagram.com/p/C_Ald1zSF5G/" },
+    { "id": 2, "image": "/instagram/lms_2.webp", "link": "https://www.instagram.com/p/DOqIZLUkzEa/" },
+    { "id": 3, "image": "/instagram/lms_3.webp", "link": "https://www.instagram.com/p/C0lfKrRybzi/" },
+    { "id": 4, "image": "/instagram/lms_4.webp", "link": "https://www.instagram.com/p/C1eS73kyeci/" },
+    { "id": 5, "image": "/instagram/lms_5.webp", "link": "https://www.instagram.com/p/C1UBPuWSuEJ/" },
+    { "id": 6, "image": "/instagram/lms_6.webp", "link": "https://www.instagram.com/p/C2t0UncL5bJ/" }
   ]
 }

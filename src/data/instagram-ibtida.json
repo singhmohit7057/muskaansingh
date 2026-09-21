@@ -1,10 +1,10 @@
 {
   "items": [
-    { "id": 7,  "image": "/instagram/ibtida_1.webp", "link": "https://www.instagram.com/p/DORAWSUj-k0/",    "account": "_ibtidaofficial_" },
-    { "id": 8,  "image": "/instagram/ibtida_2.webp", "link": "https://www.instagram.com/p/DQPkA5AjLkK/",    "account": "_ibtidaofficial_" },
-    { "id": 9,  "image": "/instagram/ibtida_3.webp", "link": "https://www.instagram.com/reel/DOL2YJzCcRD/", "account": "_ibtidaofficial_" },
-    { "id": 10, "image": "/instagram/ibtida_4.webp", "link": "https://www.instagram.com/p/DU-koiNEpUs/",    "account": "_ibtidaofficial_" },
-    { "id": 11, "image": "/instagram/ibtida_5.webp", "link": "https://www.instagram.com/reel/DOtb11kj3fO/", "account": "_ibtidaofficial_" },
-    { "id": 12, "image": "/instagram/ibtida_6.webp", "link": "https://www.instagram.com/reel/DO0g3iZCPIh/", "account": "_ibtidaofficial_" }
+    { "id": 7,  "image": "/instagram/ibtida_1.webp", "link": "https://www.instagram.com/p/DORAWSUj-k0/" },
+    { "id": 8,  "image": "/instagram/ibtida_2.webp", "link": "https://www.instagram.com/p/DQPkA5AjLkK/" },
+    { "id": 9,  "image": "/instagram/ibtida_3.webp", "link": "https://www.instagram.com/reel/DOL2YJzCcRD/" },
+    { "id": 10, "image": "/instagram/ibtida_4.webp", "link": "https://www.instagram.com/p/DU-koiNEpUs/" },
+    { "id": 11, "image": "/instagram/ibtida_5.webp", "link": "https://www.instagram.com/reel/DOtb11kj3fO/" },
+    { "id": 12, "image": "/instagram/ibtida_6.webp", "link": "https://www.instagram.com/reel/DO0g3iZCPIh/" }
   ]
 }

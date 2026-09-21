@@ -32,9 +32,26 @@
         min-height: 100vh;
       }
 
-      /* Kill any dark backgrounds */
+      /* Kill white/dark backgrounds everywhere */
       #nc-root > div,
-      #nc-root > div > div {
+      #nc-root > div > div,
+      #nc-root div,
+      #nc-root section,
+      #nc-root main,
+      #nc-root [class*="App"],
+      [class*="CollectionPage"],
+      [class*="CollectionHeader"],
+      [class*="Collection"],
+      [class*="WorkflowList"],
+      [class*="EditorContainer"],
+      [class*="EditorContent"],
+      [class*="EditorInterface"],
+      [class*="EditorControlPane"],
+      [class*="EntryEditor"],
+      [class*="ControlPaneContainer"],
+      [class*="ViewContainer"],
+      [class*="CardGrid"],
+      [class*="ListCard"] {
         background: var(--neu-bg) !important;
       }
 
@@ -43,11 +60,27 @@
         background: var(--neu-bg) !important;
         box-shadow: 0 4px 14px var(--neu-dark), 0 -2px 6px var(--neu-light) !important;
         border-bottom: none !important;
+        position: relative !important;
       }
 
       header h1, header span {
         font-family: 'Plus Jakarta Sans', sans-serif !important;
         color: var(--text) !important;
+      }
+
+      header::after {
+        content: 'Muskaan Singh — CMS';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-weight: 700;
+        font-size: 0.95rem;
+        color: var(--text);
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        pointer-events: none;
       }
 
       /* ── Sidebar / Nav ────────────────── */
@@ -120,34 +153,139 @@
       [role="listitem"],
       article {
         background: var(--neu-bg) !important;
-        border-radius: 18px !important;
+        border-radius: 14px !important;
         box-shadow: var(--shadow-out) !important;
         border: none !important;
-        transition: box-shadow 0.2s ease !important;
+        outline: none !important;
+        display: flex !important;
+        align-items: center !important;
+        padding: 14px 18px !important;
+        min-height: unset !important;
       }
 
-      [class*="Card"]:hover,
-      [class*="ListItem"]:hover {
-        box-shadow: 10px 10px 20px var(--neu-dark), -10px -10px 20px var(--neu-light) !important;
+      /* Remove only shadows from nested card elements — NOT backgrounds */
+      [class*="Card"] > div,
+      [class*="ListItem"] > div,
+      [class*="EntryCard"] > div {
+        box-shadow: none !important;
+      }
+
+      /* No hover/selection layer */
+      [class*="Card"]:hover, [class*="Card"]:focus,
+      [class*="Card"][class*="active"], [class*="Card"][class*="selected"],
+      [class*="ListItem"]:hover, [class*="ListItem"]:focus {
+        box-shadow: var(--shadow-out) !important;
       }
 
       /* ── Inputs ───────────────────────── */
-      input:not([type="checkbox"]):not([type="radio"]),
-      textarea,
-      select {
+      input:not([type="checkbox"]):not([type="radio"]):not([type="search"]):not([placeholder*="earch"]),
+      textarea {
         background: var(--neu-bg) !important;
-        border: none !important;
-        border-radius: 10px !important;
-        box-shadow: var(--shadow-in) !important;
+        border: 1.5px solid rgba(163, 177, 198, 0.7) !important;
+        border-radius: 8px !important;
+        box-shadow: none !important;
         color: var(--text) !important;
         padding: 10px 14px !important;
         outline: none !important;
+        width: 100% !important;
       }
 
-      input:focus,
-      textarea:focus,
-      select:focus {
-        box-shadow: var(--shadow-in), 0 0 0 2px rgba(76, 64, 192, 0.25) !important;
+      /* Search input */
+      input[type="search"],
+      input[placeholder*="earch"] {
+        background: var(--neu-bg) !important;
+        border: 1.5px solid rgba(163, 177, 198, 0.7) !important;
+        border-radius: 8px !important;
+        box-shadow: none !important;
+        color: var(--text) !important;
+        padding: 10px 14px 10px 36px !important;
+        outline: none !important;
+      }
+
+      input:focus, textarea:focus {
+        border-color: rgba(76, 64, 192, 0.5) !important;
+        box-shadow: 0 0 0 3px rgba(76, 64, 192, 0.1) !important;
+      }
+
+      /* ── Select / Dropdown (react-select) ── */
+      select option {
+        background: #fff !important;
+        color: var(--text) !important;
+      }
+
+      /* react-select BEM class names (static prefix) */
+      [class$="__single-value"],
+      [class*="__single-value"],
+      [class$="__placeholder"],
+      [class*="__placeholder"],
+      [class$="__input"],
+      [class*="__input"],
+      [class$="__input-container"],
+      [class*="__input-container"] {
+        color: var(--text) !important;
+      }
+
+      [class$="__control"],
+      [class*="__control"] {
+        background: var(--neu-bg) !important;
+        border: none !important;
+        box-shadow: var(--shadow-in) !important;
+        color: var(--text) !important;
+        border-radius: 10px !important;
+      }
+
+      [class$="__menu"],
+      [class*="__menu"],
+      [class$="__menu-list"],
+      [class*="__menu-list"] {
+        background: var(--neu-bg) !important;
+        box-shadow: var(--shadow-out) !important;
+        border: none !important;
+        border-radius: 12px !important;
+      }
+
+      [class$="__option"],
+      [class*="__option"] {
+        background: transparent !important;
+        color: var(--text) !important;
+      }
+
+      [class$="__option--is-focused"],
+      [class*="__option--is-focused"],
+      [class$="__option"]:hover,
+      [class*="__option"]:hover {
+        background: rgba(76, 64, 192, 0.1) !important;
+        color: var(--accent) !important;
+      }
+
+      [class$="__option--is-selected"],
+      [class*="__option--is-selected"] {
+        background: rgba(76, 64, 192, 0.15) !important;
+        color: var(--accent) !important;
+        font-weight: 600 !important;
+      }
+
+      /* Emotion/hashed class fallback — target ALL text inside selects */
+      [class*="select"] *,
+      [class*="Select"] * {
+        color: var(--text) !important;
+      }
+
+      /* Dropdown indicator arrow */
+      [class*="indicatorContainer"] svg,
+      [class*="IndicatorContainer"] svg {
+        fill: var(--text-muted) !important;
+      }
+
+      /* ── Field borders ───────────────────── */
+      [class*="ControlContainer"],
+      [class*="EditorControl"],
+      [class*="FieldWrapper"],
+      [class*="fieldWrapper"],
+      [class*="control-pane"] > div {
+        border-bottom: 1px solid rgba(163, 177, 198, 0.45) !important;
+        padding-bottom: 14px !important;
+        margin-bottom: 14px !important;
       }
 
       /* ── Labels ───────────────────────── */
@@ -187,12 +325,80 @@
         border: none !important;
       }
 
+      /* ── Hide grid/tile view toggle ─────── */
+      [aria-label*="grid" i],
+      [aria-label*="tile" i],
+      [title*="grid" i],
+      [title*="tile" i],
+      button[class*="grid" i],
+      button[class*="tile" i],
+      [class*="GridControl"],
+      [class*="TileControl"],
+      [class*="ViewToggle"] button:last-child,
+      [class*="CollectionControls"] button:last-of-type {
+        display: none !important;
+      }
+
       /* ── Scrollbar ────────────────────── */
       ::-webkit-scrollbar { width: 5px; height: 5px; }
       ::-webkit-scrollbar-track { background: var(--neu-bg); }
       ::-webkit-scrollbar-thumb {
         background: var(--neu-dark);
         border-radius: 99px;
+      }
+
+      /* ── React-select: structure-based targeting ────────
+         Uses :has() to match by DOM structure, not hashed class names  */
+
+      /* Control container = div that contains a react-select input */
+      #nc-root div:has(input[id^="react-select"]) {
+        background: var(--neu-bg) !important;
+        border: 1.5px solid rgba(163, 177, 198, 0.7) !important;
+        border-radius: 8px !important;
+        box-shadow: none !important;
+        min-height: 44px !important;
+        cursor: pointer !important;
+        color: var(--text) !important;
+      }
+
+      #nc-root div:has(input[id^="react-select"]):focus-within {
+        border-color: rgba(76, 64, 192, 0.5) !important;
+        box-shadow: 0 0 0 3px rgba(76, 64, 192, 0.1) !important;
+      }
+
+      /* All descendants of the control: force text color */
+      #nc-root div:has(input[id^="react-select"]) *,
+      #nc-root div:has(input[id^="react-select"]) > div > div {
+        color: var(--text) !important;
+        background: transparent !important;
+      }
+
+      /* Dropdown menu (rendered outside the control) */
+      #nc-root [class*="__menu"],
+      #nc-root div[class*="menu"] {
+        background: var(--neu-bg) !important;
+        border-radius: 12px !important;
+        box-shadow: var(--shadow-out) !important;
+        border: 1px solid rgba(163, 177, 198, 0.4) !important;
+        z-index: 9999 !important;
+      }
+
+      #nc-root [class*="__option"],
+      #nc-root [class*="__menu"] div {
+        background: transparent !important;
+        color: var(--text) !important;
+      }
+
+      #nc-root [class*="__option--is-focused"],
+      #nc-root [class*="__menu"] div:hover {
+        background: rgba(76, 64, 192, 0.08) !important;
+        color: var(--accent) !important;
+      }
+
+      #nc-root [class*="__option--is-selected"] {
+        background: rgba(76, 64, 192, 0.14) !important;
+        color: var(--accent) !important;
+        font-weight: 600 !important;
       }
 
       /* ── Login screen ─────────────────── */
@@ -215,6 +421,83 @@
     <script>window.CMS_MANUAL_INIT = true;</script>
   </head>
   <body>
+    <!-- ── Admin gate ───────────────────────────────────────── -->
+    <div id="admin-gate" style="
+      position:fixed; inset:0; z-index:99999;
+      background:#E0E5EC;
+      display:flex; align-items:center; justify-content:center;
+      font-family:'DM Sans',sans-serif;
+    ">
+      <div style="
+        background:#E0E5EC;
+        border-radius:24px;
+        box-shadow:12px 12px 24px #a3b1c6,-12px -12px 24px #ffffff;
+        padding:48px 40px 40px;
+        width:360px; max-width:90vw;
+        text-align:center;
+      ">
+        <div style="font-size:1.6rem;font-weight:700;color:#4C40C0;font-family:'Plus Jakarta Sans',sans-serif;letter-spacing:0.03em;margin-bottom:6px;">
+          Muskaan Singh
+        </div>
+        <div style="font-size:0.75rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#6B7280;margin-bottom:32px;">
+          Content Management
+        </div>
+        <input id="gate-input" type="password" placeholder="Enter password"
+          autocomplete="current-password"
+          style="
+            width:100%;box-sizing:border-box;
+            background:#E0E5EC;
+            border:1.5px solid rgba(163,177,198,0.7);
+            border-radius:10px;
+            padding:13px 16px;
+            font-size:0.95rem;
+            color:#3D4852;
+            outline:none;
+            margin-bottom:16px;
+            font-family:'DM Sans',sans-serif;
+          "
+          onkeydown="if(event.key==='Enter') checkGate()"
+        />
+        <div id="gate-error" style="color:#c0392b;font-size:0.8rem;margin-bottom:12px;min-height:18px;"></div>
+        <button onclick="checkGate()" style="
+          width:100%;
+          background:#4C40C0;
+          color:#fff;
+          border:none;
+          border-radius:50px;
+          padding:14px;
+          font-size:0.95rem;
+          font-weight:700;
+          letter-spacing:0.04em;
+          cursor:pointer;
+          font-family:'DM Sans',sans-serif;
+          box-shadow:4px 4px 12px #a3b1c6,-2px -2px 6px #ffffff;
+          transition:background 0.2s;
+        ">
+          Enter
+        </button>
+      </div>
+    </div>
+    <script>
+      const _KEY = 'admin_auth', _PWD = 'heyhihello';
+      function checkGate() {
+        const val = document.getElementById('gate-input').value;
+        if (val === _PWD) {
+          sessionStorage.setItem(_KEY, _PWD);
+          document.getElementById('admin-gate').remove();
+        } else {
+          document.getElementById('gate-error').textContent = 'Incorrect password.';
+          document.getElementById('gate-input').value = '';
+          document.getElementById('gate-input').focus();
+        }
+      }
+      if (sessionStorage.getItem(_KEY) === _PWD) {
+        document.getElementById('admin-gate').remove();
+      } else {
+        setTimeout(() => document.getElementById('gate-input').focus(), 100);
+      }
+    </script>
+    <!-- ────────────────────────────────────────────────────── -->
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
     <script>
       CMS.init({
@@ -316,7 +599,6 @@
                         { label: 'ID',        name: 'id',      widget: 'number', value_type: 'int' },
                         { label: 'Thumbnail', name: 'image',   widget: 'image', media_folder: '/public/instagram', public_folder: '/instagram' },
                         { label: 'Post Link', name: 'link',    widget: 'string' },
-                        { label: 'Account',   name: 'account', widget: 'hidden', default: 'labelmuskaansingh' },
                       ],
                     },
                   ],
@@ -332,7 +614,6 @@
                         { label: 'ID',        name: 'id',      widget: 'number', value_type: 'int' },
                         { label: 'Thumbnail', name: 'image',   widget: 'image', media_folder: '/public/instagram', public_folder: '/instagram' },
                         { label: 'Post Link', name: 'link',    widget: 'string' },
-                        { label: 'Account',   name: 'account', widget: 'hidden', default: '_ibtidaofficial_' },
                       ],
                     },
                   ],
@@ -348,7 +629,6 @@
                         { label: 'ID',        name: 'id',      widget: 'number', value_type: 'int' },
                         { label: 'Thumbnail', name: 'image',   widget: 'image', media_folder: '/public/instagram', public_folder: '/instagram' },
                         { label: 'Post Link', name: 'link',    widget: 'string' },
-                        { label: 'Account',   name: 'account', widget: 'hidden', default: 'muskaansingh97' },
                       ],
                     },
                   ],
@@ -382,6 +662,90 @@
           ],
         },
       });
+
+      // ── Preview pane styles ──────────────────────────────────────────
+      CMS.registerPreviewStyle(
+        'https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700&display=swap'
+      );
+      CMS.registerPreviewStyle(`
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+          background: #E0E5EC;
+          font-family: 'DM Sans', sans-serif;
+          color: #3D4852;
+          padding: 24px;
+          line-height: 1.6;
+        }
+
+        img {
+          border-radius: 16px;
+          max-width: 200px;
+          height: 200px;
+          object-fit: cover;
+          display: block;
+          margin: 10px 0 14px;
+          box-shadow: 6px 6px 14px #a3b1c6, -4px -4px 10px #ffffff;
+        }
+
+        strong {
+          display: block;
+          font-size: 0.7rem;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0.08em;
+          color: #4C40C0;
+          margin-top: 12px;
+          margin-bottom: 2px;
+        }
+
+        p, span, div {
+          font-size: 0.9rem;
+          color: #3D4852;
+        }
+
+        a {
+          color: #6C63FF;
+          font-size: 0.8rem;
+          word-break: break-all;
+        }
+
+        h1, h2, h3 {
+          font-family: 'Plus Jakarta Sans', sans-serif;
+          color: #4C40C0;
+          margin-bottom: 8px;
+        }
+
+        hr {
+          border: none;
+          border-top: 2px solid #c8d0da;
+          margin: 24px 0;
+        }
+
+        /* Brand value — make raw value readable */
+        p:not(:empty) {
+          min-height: 1em;
+        }
+
+        /* Divider between list items — target sibling containers */
+        div + div {
+          border-top: 2px solid #c8d0da;
+          padding-top: 20px;
+          margin-top: 4px;
+        }
+
+        /* Item label style */
+        strong {
+          color: #4C40C0;
+          font-size: 0.7rem;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0.08em;
+          display: block;
+          margin-top: 10px;
+          margin-bottom: 2px;
+        }
+      `, { raw: true });
     </script>
   </body>
 </html>
